@@ -4,6 +4,12 @@ My dotfiles, save me a few seconds when reinstalling my system.
 
     git clone https://github.com/hg8/rc.git
 
+#Zsh
+
+##Create symlinks:
+
+    ln -s ~/rc/.zshrc ~/
+
 #Vim
 
 ##Get submodule
@@ -27,4 +33,6 @@ My dotfiles, save me a few seconds when reinstalling my system.
     git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
     git add .
     git commit -m "Install Fugitive.vim bundle as a submodule."
+
+
 
