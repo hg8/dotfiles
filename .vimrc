@@ -1,3 +1,4 @@
+set number
 nmap <F8> :TagbarOpenAutoClose<CR> 
 nmap <F9> :Tagbar<CR> 
 let g:tagbar_type_python = {
