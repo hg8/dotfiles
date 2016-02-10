@@ -10,6 +10,12 @@ My dotfiles, save me a few seconds when reinstalling my system.
 
     ln -s ~/rc/.zshrc ~/
 
+#Git
+
+##Create symlinks:
+
+    ln -s ~/rc/.gitconfig ~/
+
 #Vim
 
 ##Get submodule
