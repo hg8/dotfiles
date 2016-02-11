@@ -1,44 +1,20 @@
-My dotfiles, save me a few seconds when reinstalling my system.
+My dotfiles, save me a few seconds when reinstalling my system. Also allow me to synchronize my configuration between multiple workstations. 
 
 ##Installation:
 
     git clone https://github.com/hg8/rc.git
-
-#Zsh
-
-##Create symlinks:
-
+    #ZSH symlinks
     ln -s ~/rc/.zshrc ~/
-
-#Git
-
-##Create symlinks:
-
+    #Git symlinks
     ln -s ~/rc/.gitconfig ~/
-
-#Vim
-
-##Get submodule
-
-    cd ~/rc/.vim
-    git submodule init
-    git submodule update
-
-##Create symlinks:
-
+    #Vim symlinks
     ln -s ~/rc/.vim/ ~/
     ln -s ~/rc/.vimrc ~/
-
-##Update all bundled plugins:
-
-    git submodule foreach git pull origin master
-
-## Install new bundled plugin
     
-    cd ~/rc/.vim
-    git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
-    git add .
-    git commit -m "Install Fugitive.vim bundle as a submodule."
+    #Install all vim bundled plugins:
+    :PluginInstall
+    #Update plugins :
+    :PluginUpdate
 
 
 
