@@ -28,6 +28,7 @@ filetype plugin indent on    " required
 
 
 set number
+set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :Tagbar<CR>
 let g:tagbar_type_python = {
