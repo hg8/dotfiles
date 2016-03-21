@@ -15,6 +15,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -32,6 +34,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 " end Syntastic
+
+" Powerline for Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='light'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -68,3 +74,4 @@ inoremap jj <Esc>
 nnoremap <Tab> :bnext<Cr>
 syntax on
 filetype plugin indent on
+
