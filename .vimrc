@@ -48,6 +48,10 @@ let g:syntastic_check_on_wq = 0
 
 set number
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :Tagbar<CR>
 let g:tagbar_type_python = {
