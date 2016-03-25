@@ -48,10 +48,16 @@ let g:syntastic_check_on_wq = 0
 
 set number
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+" Quick switch betwen split windows
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+" Resize slip vertical using + -, et <>
+map - <c-w><
+map + <c-w>>
+
 nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :Tagbar<CR>
 let g:tagbar_type_python = {
