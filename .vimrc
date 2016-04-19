@@ -18,6 +18,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'joshdick/onedark.vim'
+Plugin 'joshdick/airline-onedark.vim'
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -39,12 +41,14 @@ set statusline+=%*
 
 " Powerline for Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='light'
+let g:airline_theme='onedark'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 set number
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
@@ -87,3 +91,4 @@ nnoremap <Tab> :bnext<Cr>
 syntax on
 filetype plugin indent on
 
+colorscheme onedark
