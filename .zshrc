@@ -55,6 +55,7 @@ plugins=(git sudo battery)
 
   export PATH="/home/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
+  export GPGKEY=CE203A57
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,5 +84,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias maj='sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y'
-alias clean='sudo apt-get autoclean && sudo apt-get autoremove'
+alias meteo="curl wttr.in/bordeaux"
+alias i3config="vim ~/.config/i3/config"

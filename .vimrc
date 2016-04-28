@@ -85,6 +85,7 @@ let g:tagbar_map_togglefold = 'za'
 
 map <F2> :NERDTreeToggle <CR>
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 let mapleader=";"
 inoremap jj <Esc>
 nnoremap <Tab> :bnext<Cr>
