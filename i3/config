@@ -116,6 +116,7 @@ for_window [class="Spotify"] move to workspace $workspace10
 for_window [class="Lxappearance"] floating enable
 for_window [class="Seahorse"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="qTox"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
