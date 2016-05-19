@@ -184,6 +184,8 @@ bar {
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -font "System San Francisco Display 38"
 
+bindsym XF86Search exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -font "System San Francisco Display 38"
+
 # Multimedia Keys
 # increase volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
