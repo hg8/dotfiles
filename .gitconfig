@@ -1,8 +1,12 @@
 [user]
-	email = hforestier@live.fr
+	email = hforestier@protonmail.com 
 	name = Hugo F.
+
+[color]
+	ui = auto
+
 [core]
-	pager = diff-so-fancy | less --tabs=1,5 -R
+	editor = vim
 
 [alias]
     st = status
@@ -10,3 +14,6 @@
     br = branch
     co = checkout
     df = diff
+
+[status]
+	showUntrackedFiles = all
