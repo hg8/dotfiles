@@ -16,5 +16,6 @@ My dotfiles, save me a few seconds when reinstalling my system. Also allow me to
     #Update plugins :
     :PluginUpdate
 
+##Screenshot:
 
-
+![](http://i.imgur.com/qbQvpMn.jpg)
