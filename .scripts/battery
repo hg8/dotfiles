@@ -92,11 +92,16 @@ if ($status eq 'Discharging') {
 	}
 
 	if ($percent < 5) {
+		exec("notify-send -t 0 -u critical \"Low Battery\" \"$percent% left.\"");
 		exit(33);
 	}
 }
 else{
 	print "#98C379\n";
+	if($percent == 100)
+	{
+		exec("notify-send -t 0 -u normal \"Charge Complete\" \"The battery is fully charged.\"");
+	}
 }
 
 exit(0);
