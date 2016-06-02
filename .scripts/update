@@ -1,16 +1,18 @@
 #!/bin/sh
-#Hugo
+#Hugo F.
 
 #Count how many update available using checkupdate
 
 #echo "$(checkupdates|wc -l)+$(cower -u|wc -l)"|bc -l
 COUNTARCH=$(checkupdates|wc -l)
 COUNTAUR=$(cower -u|wc -l)
+UPDATES=$(checkupdates | awk '{print $1;}')
 
 TOTAL=$(($COUNTARCH+$COUNTAUR))
 
 if [[ $TOTAL -ge 1 ]]; then
 	echo " "$TOTAL
+	notify-send -t 0 -u normal "New Arch Linux Updates" "$UPDATES"
 fi
 
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
