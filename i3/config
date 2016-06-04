@@ -108,6 +108,7 @@ assign [class="Firefox"] $workspace1
 assign [class="Thunar"] $workspace4 
 assign [class="chromium"] $workspace5
 assign [class="qTox"] $workspace9
+assign [class="telegram-desktop"] $workspace9 
 #bug with the beta client, workaround :
 #assign [class="spotify"] $workspace10
 for_window [class="Spotify"] move to workspace $workspace10
@@ -117,6 +118,11 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="Seahorse"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="qTox"] floating enable
+for_window [class="telegram-desktop"] floating enable
+for_window [class="gpa"] floating enable
+
+#Disable titlebar
+for_window [class="^.*"] border pixel 1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
