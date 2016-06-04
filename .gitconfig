@@ -17,3 +17,5 @@
 
 [status]
 	showUntrackedFiles = all
+[push]
+	default = upstream
