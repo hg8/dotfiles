@@ -51,7 +51,6 @@ let g:syntastic_check_on_wq = 0
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 set number
-set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 " Quick switch betwen split windows
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>

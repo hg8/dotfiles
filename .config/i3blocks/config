@@ -2,45 +2,38 @@ command=/usr/lib/i3blocks/$BLOCK_NAME
 
 markup=pango
 align=center
-color=#7780a1
-#separator=false
-separator_block_width=30
-
-[spotify]
-command=/home/hugo/.scripts/spotify-nowplaying.sh
-interval=1
-color=#2ebd59
-
-[separator]
-
-[wifi]
-command=/home/hugo/.scripts/wifi
-label=
-instance=wlp2s0
-interval=10
-
-[separator]
-
-[battery]
-command=/home/hugo/.scripts/battery
-interval=5
-
-[separator]
+color=#C9CCDB
+separator=false
+full_text=
+separator_block_width=15
+border_top=0
+border_left=0
+border_right=0
+border_bottom=2
 
 [update]
 command=/home/hugo/.scripts/update
 #label=
 interval=3600
 color=#C9CCDB
+border=#eaec24
+
+[separator]
+
+[ip-address]
+command=/home/hugo/.scripts/ip-address
+label=
+interval=60
+border=#8ae32b
 
 [separator]
 
 [memory]
-command=/home/hugo/.scripts/memory
+command=/home/hugo/.scripts/cpu
 label=
-instance=mem;used
-interval=3
+interval=2
 color=#C9CCDB
+border=#7e7e7e
 
 [separator]
 
@@ -49,21 +42,14 @@ command=/home/hugo/.scripts/audio
 interval=1
 #color=#E5C07B
 color=#C9CCDB
+border=#cc241d
 
 [separator]
 
 [date]
-command=echo "`date +'%d %b'`"
+command=date '+  %b %d  %H:%M'
 interval=1
-label=
-#color=#ff797b
 color=#C9CCDB
+border=#04a5c7
 
 [separator]
-
-[time]
-command=echo "`date +'%H:%M'`"
-interval=1
-label=
-#color=#F3EA0C
-color=#C9CCDB
