@@ -16,7 +16,7 @@ command=/home/hugo/bin/update
 #label=
 interval=3600
 color=#C9CCDB
-border=#eaec24
+border=#04a5c7
 
 [separator]
 
@@ -24,7 +24,7 @@ border=#eaec24
 command=/home/hugo/bin/ip-address
 label=
 interval=60
-border=#8ae32b
+border=#eaec24
 
 [separator]
 
@@ -49,7 +49,7 @@ label=CPU
 interval=3
 min_width=CPU: 100.00%
 label=
-border=#7e7e7e
+border=#b16286
 
 [separator]
 
@@ -66,6 +66,6 @@ border=#cc241d
 command=date '+  %b %d  %H:%M'
 interval=1
 color=#C9CCDB
-border=#04a5c7
+border=#72afb2
 
 [separator]
