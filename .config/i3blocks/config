@@ -1,11 +1,11 @@
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/usr/libexec/i3blocks/$BLOCK_NAME
 
 markup=pango
 align=center
 color=#C9CCDB
 separator=false
 full_text=
-separator_block_width=15
+separator_block_width=10
 border_top=0
 border_left=0
 border_right=0
@@ -28,11 +28,27 @@ border=#8ae32b
 
 [separator]
 
+[bandwidth]
+instance=enp1s0
+interval=5
+border=#8ae32b
+
+[separator]
+
 [memory]
-command=/home/hugo/bin/cpu
+label=MEM
+separator=false
+interval=3
+label=
+border=#7e7e7e
+
+[separator]
+
+[cpu_usage]
+label=CPU
+interval=3
+min_width=CPU: 100.00%
 label=
-interval=2
-color=#C9CCDB
 border=#7e7e7e
 
 [separator]
