@@ -30,7 +30,7 @@ border=#eaec24
 
 [bandwidth]
 instance=enp1s0
-interval=5
+interval=1
 border=#8ae32b
 
 [separator]

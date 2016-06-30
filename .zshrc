@@ -49,7 +49,7 @@ ZSH_THEME="bullet-train"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo battery)
+plugins=(git sudo battery autojump )
 
 # User configuration
 
@@ -86,3 +86,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias meteo="curl wttr.in/bordeaux"
 alias i3config="vim ~/.config/i3/config"
+
+source /etc/profile.d/autojump.sh
+
