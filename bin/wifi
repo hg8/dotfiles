@@ -36,13 +36,13 @@ echo $QUALITY% "("$SSID")"  #full text
 echo $QUALITY% # short text
 
 # color
-if [[ $QUALITY -ge 80 ]]; then
+if [[ $QUALITY -ge 50 ]]; then
     echo "#61AFEF"
-elif [[ $QUALITY -lt 80 ]]; then
+elif [[ $QUALITY -lt 50 ]]; then
     echo "#C678DD"
-elif [[ $QUALITY -lt 60 ]]; then
+elif [[ $QUALITY -lt 30 ]]; then
     echo "#D19A66"
-elif [[ $QUALITY -lt 40 ]]; then
+elif [[ $QUALITY -lt 10 ]]; then
     echo "#ABB2BF"
 fi
 

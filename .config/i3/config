@@ -5,8 +5,8 @@ set $workspace2 "2: "
 set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
+set $workspace6 "6: "
+set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
 set $workspace10 "10: "
@@ -107,6 +107,8 @@ bindsym $mod+Shift+agrave move container to workspace $workspace10
 assign [class="Firefox"] $workspace1
 assign [class="Thunar"] $workspace4 
 assign [class="chromium"] $workspace5
+assign [class="zathura"] $workspace6
+assign [class="vlc"] $workspace7
 assign [class="qTox"] $workspace9
 assign [class="telegram-desktop"] $workspace9 
 #bug with the beta client, workaround :
@@ -205,13 +207,12 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id  xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id  light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
 
 exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
 exec --no-startup-id compton -f
-exec --no-startup-id i3-battery-popup
-
+exec --no-startup-id dunst
 
 #Power Management
 set $mode_system System (l) lock, (s) suspend ,(e) logout, (r) reboot, (Shift+s) shutdown

@@ -7,7 +7,8 @@ color=#7780a1
 separator_block_width=30
 
 [spotify]
-command=/home/hugo/.scripts/spotify-nowplaying.sh
+command=/home/hugo/.scripts/spotify-song.sh
+label=
 interval=1
 color=#2ebd59
 
@@ -34,6 +35,13 @@ interval=3600
 color=#C9CCDB
 
 [separator]
+
+[cpu_usage]
+label=
+interval=1
+min_width=CPU: 100%
+#separator=false
+color=#C9CCDB
 
 [memory]
 command=/home/hugo/.scripts/memory

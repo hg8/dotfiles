@@ -53,9 +53,8 @@ plugins=(git sudo battery)
 
 # User configuration
 
-  export PATH="/home/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-  export GPGKEY=CE203A57
+export GPGKEY=CE203A57
 
 source $ZSH/oh-my-zsh.sh
 
