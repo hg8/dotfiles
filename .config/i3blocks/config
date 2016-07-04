@@ -7,7 +7,7 @@ color=#7780a1
 separator_block_width=30
 
 [spotify]
-command=/home/hugo/.scripts/spotify-song.sh
+command=/home/hugo/bin/spotify-song.sh
 label=
 interval=1
 color=#2ebd59
@@ -15,7 +15,7 @@ color=#2ebd59
 [separator]
 
 [wifi]
-command=/home/hugo/.scripts/wifi
+command=/home/hugo/bin/wifi
 label=
 instance=wlp2s0
 interval=10
@@ -23,13 +23,13 @@ interval=10
 [separator]
 
 [battery]
-command=/home/hugo/.scripts/battery
+command=/home/hugo/bin/battery
 interval=5
 
 [separator]
 
 [update]
-command=/home/hugo/.scripts/update
+command=/home/hugo/bin/update
 #label=
 interval=3600
 color=#C9CCDB
@@ -44,7 +44,7 @@ min_width=CPU: 100%
 color=#C9CCDB
 
 [memory]
-command=/home/hugo/.scripts/memory
+command=/home/hugo/bin/memory
 label=
 instance=mem;used
 interval=3
@@ -53,7 +53,7 @@ color=#C9CCDB
 [separator]
 
 [volume]
-command=/home/hugo/.scripts/audio
+command=/home/hugo/bin/audio
 interval=1
 #color=#E5C07B
 color=#C9CCDB
