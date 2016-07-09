@@ -10,8 +10,8 @@
     word_wrap = yes
     ignore_newline = no
     geometry = "450x5-30+20"
-    transparency = 0
-    idle_threshold = 120
+    transparency = 10
+    idle_threshold = 90
     monitor = 1
     follow = mouse
     sticky_history = yes
@@ -21,10 +21,12 @@
     horizontal_padding = 8
     separator_color = frame
     startup_notification = false
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox -new-tab
 
 [frame]
-    width = 1
-    color = "#464B50"
+    width = 0
+    color = "#222222"
 
 [shortcuts]
     close = ctrl+space
@@ -33,16 +35,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#323537"
-    foreground = "#8F9D6A"
-    timeout = 30
+    background = "#334A5D"
+    foreground = "#ffffff"
+    timeout = 10
 
 [urgency_normal]
-    background = "#323537"
-    foreground = "#AFC4DB"
-    timeout = 45
+    background = "#334A5D"
+    foreground = "#ffffff"
+    timeout = 10
 
 [urgency_critical]
-    background = "#323537"
-    foreground = "#CF6A4C"
+    background = "#A54242"
+    foreground = "#ffffff"
     timeout = 0
