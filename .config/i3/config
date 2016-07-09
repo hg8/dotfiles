@@ -213,6 +213,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen
 exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
 exec --no-startup-id compton -f
 exec --no-startup-id dunst
+exec --no-startup-id battery-notifications
 
 #Power Management
 set $mode_system System (l) lock, (s) suspend ,(e) logout, (r) reboot, (Shift+s) shutdown
