@@ -20,6 +20,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'joshdick/onedark.vim'
 Plugin 'joshdick/airline-onedark.vim'
+Plugin 'w0ng/vim-hybrid'
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -92,4 +93,5 @@ nnoremap <Tab> :bnext<Cr>
 syntax on
 filetype plugin indent on
 
-colorscheme onedark
+set background=dark
+colorscheme hybrid
