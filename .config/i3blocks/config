@@ -28,11 +28,20 @@ interval=5
 
 [separator]
 
+
+command=/home/hugo/bin/bitcoin
+label=
+interval=60
+color=#F0C674
+
+[separator]
+
 [update]
 command=/home/hugo/bin/update
 #label=
 interval=3600
 color=#C9CCDB
+
 
 [separator]
 
