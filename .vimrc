@@ -21,6 +21,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'joshdick/onedark.vim'
 Plugin 'joshdick/airline-onedark.vim'
 Plugin 'w0ng/vim-hybrid'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'mbbill/undotree'
+
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -62,6 +65,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 map - <c-w><
 map + <c-w>>
 
+nnoremap <F5> :UndotreeToggle<cr>
 nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :Tagbar<CR>
 let g:tagbar_type_python = {
@@ -91,6 +95,12 @@ inoremap jj <Esc>
 nnoremap <Tab> :bnext<Cr>
 syntax on
 filetype plugin indent on
+
+" keep all undos files in the same place
+if has("persistent_undo")
+	set undodir=~/.undodir/
+	set undofile
+endif
 
 set background=dark
 let g:hybrid_reduced_contrast = 1
