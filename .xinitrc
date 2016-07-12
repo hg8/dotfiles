@@ -46,6 +46,8 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 xrandr --dpi 220
 feh --bg-scale ~/Pictures/wallpaper.jpeg
 
