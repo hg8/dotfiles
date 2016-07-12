@@ -19,9 +19,16 @@ border=#ffffff
 
 [separator]
 
+command=/home/hugo/bin/ethereum
+label=
+interval=5
+border=#78cee7
+
+[separator]
+
 command=/home/hugo/bin/bitcoin
 label=
-interval=60
+interval=5
 border=#78cee7
 
 [separator]
