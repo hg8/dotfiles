@@ -102,6 +102,9 @@ if has("persistent_undo")
 	set undofile
 endif
 
+" Automatically close function preview windows
+autocmd CompleteDone * pclose 
+
 set background=dark
 let g:hybrid_reduced_contrast = 1
 colorscheme hybrid
