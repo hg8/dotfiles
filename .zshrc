@@ -55,7 +55,7 @@ plugins=(git sudo battery autojump virtualenvwrapper)
 
 #  export PATH="/home/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-  export GPGKEY=CE203A57
+export WORKON_HOME=~/Envs
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,6 +87,18 @@ source $ZSH/oh-my-zsh.sh
 alias meteo="curl wttr.in/bordeaux"
 alias i3config="vim ~/.config/i3/config"
 alias http="http --style='native'"
+alias mv="mv -i"
 
 source /etc/profile.d/autojump.sh
 
+
+man() {
+	env \
+		LESS_TERMCAP_md=$'\e[1;36m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[1;40;92m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[1;32m' \
+			man "$@"
+}
