@@ -18,4 +18,4 @@ My dotfiles, save me a few seconds when reinstalling my system. Also allow me to
 
 ##Screenshot:
 
-![](http://i.imgur.com/qbQvpMn.jpg)
+![2016-08-31-163228_1918x1079_scrot](https://cloud.githubusercontent.com/assets/9076747/18132834/9eb1c4f0-6f98-11e6-84f2-1c237a679642.png)
