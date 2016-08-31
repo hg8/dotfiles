@@ -147,8 +147,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
+set $bg-color 	         #1c1c1c
+set $inactive-bg-color   #1c1c1c
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
@@ -199,3 +199,9 @@ mode "$mode_system" {
     }
 bindsym $mod+Escape mode "$mode_system"
 
+
+#Disable titlebar
+for_window [class="^.*"] border pixel 1
+
+smart_gaps on
+gaps inner 8
