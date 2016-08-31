@@ -2,19 +2,17 @@ My dotfiles, save me a few seconds when reinstalling my system. Also allow me to
 
 ##Installation:
 
-    git clone https://github.com/hg8/rc.git
-    #ZSH symlinks
-    ln -s ~/rc/.zshrc ~/
-    #Git symlinks
-    ln -s ~/rc/.gitconfig ~/
-    #Vim symlinks
-    ln -s ~/rc/.vim/ ~/
-    ln -s ~/rc/.vimrc ~/
-    
-    #Install all vim bundled plugins:
+Whilst you will be able to use the `install.sh` script, you probably won't manage to get everything to work properly as it is intended for my own use. But feel free to manually browse files !
+ 
+    git clone git@github.com:hg8/dotfiles.git
+    cd dotfiles
+    ./install.sh
+ 
+    #Install all Vim bundled plugins:
     :PluginInstall
     #Update plugins :
     :PluginUpdate
+
 
 ##Screenshot:
 
