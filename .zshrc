@@ -88,6 +88,8 @@ alias meteo="curl wttr.in/bordeaux"
 alias i3config="vim ~/.config/i3/config"
 alias http="http --style='native'"
 alias mv="mv -i"
+alias es="./Documents/Tools/elasticsearch-2.3.5/bin/elasticsearch"
+alias kibana="./Documents/Tools/kibana-4.5.4-linux-x64/bin/kibana"
 
 source /etc/profile.d/autojump.sh
 
@@ -102,3 +104,6 @@ man() {
 		LESS_TERMCAP_us=$'\e[1;32m' \
 			man "$@"
 }
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"

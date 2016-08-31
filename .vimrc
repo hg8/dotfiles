@@ -18,13 +18,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
-Plugin 'joshdick/onedark.vim'
-Plugin 'joshdick/airline-onedark.vim'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'mbbill/undotree'
-
-
+Plugin 'chriskempson/base16-vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
@@ -45,7 +41,7 @@ set statusline+=%*
 
 " Powerline for Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='base16'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -106,5 +102,5 @@ endif
 autocmd CompleteDone * pclose 
 
 set background=dark
-let g:hybrid_reduced_contrast = 1
-colorscheme hybrid
+let base16colorspace=256
+colorscheme base16-default-dark
