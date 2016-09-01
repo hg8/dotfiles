@@ -19,6 +19,7 @@ command=/home/hugo/bin/wifi
 label=
 instance=wlp2s0
 interval=10
+color=#FFFFFF
 
 [separator]
 
@@ -26,13 +27,13 @@ interval=10
 command=/home/hugo/bin/battery
 interval=5
 
-[separator]
+#[separator]
 
 
-command=/home/hugo/bin/bitcoin
-label=
-interval=60
-color=#F0C674
+#command=/home/hugo/bin/bitcoin
+#label=
+#interval=60
+#color=#F0C674
 
 [separator]
 
@@ -43,21 +44,21 @@ interval=3600
 color=#C9CCDB
 
 
-[separator]
+#[separator]
 
-[cpu_usage]
-label=
-interval=1
-min_width=CPU: 100%
+#[cpu_usage]
+#label=
+#interval=1
+#min_width=CPU: 100%
 #separator=false
-color=#C9CCDB
+#color=#C9CCDB
 
-[memory]
-command=/home/hugo/bin/memory
-label=
-instance=mem;used
-interval=3
-color=#C9CCDB
+#[memory]
+#command=/home/hugo/bin/memory
+#label=
+#instance=mem;used
+#interval=3
+#color=#C9CCDB
 
 [separator]
 
@@ -70,17 +71,9 @@ color=#C9CCDB
 [separator]
 
 [date]
-command=echo "`date +'%d %b'`"
+command=echo "`date +'%d %b %H:%M'`"
 interval=1
 label=
 #color=#ff797b
 color=#C9CCDB
 
-[separator]
-
-[time]
-command=echo "`date +'%H:%M'`"
-interval=1
-label=
-#color=#F3EA0C
-color=#C9CCDB

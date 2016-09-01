@@ -5,14 +5,14 @@ import webbrowser
 import requests
 
 if os.environ.get("BLOCK_BUTTON") == "1":
-    webbrowser.open_new_tab('http://bitcoinity.org/markets/bitstamp/USD')
+    webbrowser.open_new_tab('https://www.tradingview.com/chart/ksRH38rk/')
 
 try:
-    r = requests.get('https://www.bitstamp.net/api/v2/ticker/btceur')
+    r = requests.get('https://api.kraken.com/0/public/Ticker?pair=BTCEUR');
     ticker = r.json()
 
-    print('%.2f€' % float(ticker['last']))
+    print('%.2f€' % float(ticker['result']['XXBTZEUR']['c'][0]))
 except:
     print('error')
     print('error')
-    print('#ff0000')
+    print('#F4BF75')

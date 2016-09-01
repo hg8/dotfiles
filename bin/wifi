@@ -32,17 +32,15 @@ SSID=$(iwgetid -r)
 
 #------------------------------------------------------------------------
 
-echo $QUALITY% "("$SSID")"  #full text
+echo "$SSID"  #full text
 echo $QUALITY% # short text
 
 # color
 if [[ $QUALITY -ge 50 ]]; then
-    echo "#61AFEF"
+    echo "#6A9FB5"
 elif [[ $QUALITY -lt 50 ]]; then
-    echo "#C678DD"
-elif [[ $QUALITY -lt 30 ]]; then
-    echo "#D19A66"
+    echo "#75B5AA"
 elif [[ $QUALITY -lt 10 ]]; then
-    echo "#ABB2BF"
+    echo "#AA759F"
 fi
 
