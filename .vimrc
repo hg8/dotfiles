@@ -18,9 +18,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
-Plugin 'joshdick/onedark.vim'
-Plugin 'joshdick/airline-onedark.vim'
 Plugin 'w0ng/vim-hybrid'
+Plugin 'mbbill/undotree'
+Plugin 'chriskempson/base16-vim'
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -42,7 +42,7 @@ set statusline+=%*
 
 " Powerline for Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='base16'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -52,7 +52,6 @@ let g:syntastic_check_on_wq = 0
 let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 set number
-set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 " Quick switch betwen split windows
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
@@ -63,6 +62,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 map - <c-w><
 map + <c-w>>
 
+nnoremap <F5> :UndotreeToggle<cr>
 nmap <F8> :TagbarOpenAutoClose<CR>
 nmap <F9> :Tagbar<CR>
 let g:tagbar_type_python = {
@@ -93,5 +93,11 @@ nnoremap <Tab> :bnext<Cr>
 syntax on
 filetype plugin indent on
 
-set background=dark
-colorscheme hybrid
+" keep all undos files in the same place
+if has("persistent_undo")
+	set undodir=~/.undodir/
+	set undofile
+endif
+
+let base16colorspace=256
+colorscheme base16-default-dark
