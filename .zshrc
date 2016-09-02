@@ -11,7 +11,7 @@ BULLETTRAIN_EXEC_TIME_BG="red"
 BULLETTRAIN_GIT_BG="black"
 BULLETTRAIN_GIT_FG="white"
 
-plugins=(git sudo battery autojump virtualenvwrapper)
+plugins=(common-aliases dirhistory httpie python pip git sudo battery autojump virtualenvwrapper web-search)
 
 export WORKON_HOME=~/Envs
 export EDITOR='vim'
