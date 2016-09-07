@@ -27,13 +27,13 @@ color=#FFFFFF
 command=/home/hugo/bin/battery
 interval=5
 
-#[separator]
+[separator]
 
 
-#command=/home/hugo/bin/bitcoin
-#label=
-#interval=60
-#color=#F0C674
+command=/home/hugo/bin/bitcoin
+label=
+interval=60
+color=#F0C674
 
 [separator]
 
