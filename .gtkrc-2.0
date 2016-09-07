@@ -16,3 +16,5 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="none"
+gtk-cursor-theme-name="Breeze-Obsidian"
+gtk-cursor-theme-size=48
