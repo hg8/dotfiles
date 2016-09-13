@@ -5,7 +5,7 @@ align=center
 color=#C9CCDB
 #separator=false
 #full_text=
-separator_block_width=30
+separator_block_width=20
 border_top=0
 border_left=0
 border_right=0
@@ -22,14 +22,14 @@ border=#ffffff
 command=/home/hugo/bin/ethereum
 label=
 interval=5
-border=#78cee7
+border=#f4bf75
 
 [separator]
 
 command=/home/hugo/bin/bitcoin
 label=
 interval=5
-border=#78cee7
+border=#f4bf75
 
 [separator]
 
@@ -37,7 +37,7 @@ border=#78cee7
 command=/home/hugo/bin/ip-address
 label=
 interval=60
-border=#fa83c0
+border=#90a959
 
 [separator]
 
@@ -53,7 +53,7 @@ label=MEM
 separator=false
 interval=3
 label=
-border=#ffff55
+border=#6a9fb5
 
 [separator]
 
@@ -62,20 +62,20 @@ label=CPU
 interval=3
 min_width=CPU: 100.00%
 label=
-border=#7ba5a
+border=#aa759f
 
 [separator]
 
 [volume]
 command=/home/hugo/bin/audio
 interval=1
-border=#e17f64
+border=#75b5aa
 
 [separator]
 
 [date]
-command=date '+  %b %d  %H:%M'
+command=date '+  %b %d %H:%M'
 interval=1
-border=#555555
+border=d0d0d0
 
 [separator]
