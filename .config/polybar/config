@@ -42,10 +42,10 @@ modules-left = powermenu
 modules-right = updates bitcoin date
 
 [bar/bottom]
+monitor = DP-1
 bottom = true
 width = 100%
 height = 28
-dock = false
 
 #background = #cc131313
 background = #181818
@@ -71,32 +71,74 @@ modules-left = i3
 modules-center = 
 modules-right = disk-root cpu memory 
 
-[bar/external_bottom]
-;inherit_from = bar/bottom
+[bar/top1]
+monitor = VGA-1
+width = 100%
+; height = 34
+height = 28
+clickareas = 35
 
+tray-background = #131313
+#background = #cc131313
+background = #181818
+foreground = #D0D0D0
+underline-color = ${bar/bottom.background}
+
+locale = fr_FR.UTF-8
+
+tray-position = right
+
+spacing = 4
+;spacing = 2
+underline-size = 2
+padding-left = 2
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
+;module_margin_left = 1
+;module_margin_right = 1
+
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=8;0
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=10;0
+font-3 = Siji:size=10;0
+font-4 = Monospace:size=10;0
+
+modules-center = xwindow
+modules-left = powermenu
+modules-right = updates bitcoin date
+
+[bar/bottom1]
+monitor = VGA-1
 bottom = true
-width = ${bar/bottom.width}
-height = ${bar/bottom.height}
+width = 100%
+height = 28
 
-background = ${bar/bottom.background}
-foreground = ${bar/bottom.foreground}
-linecolor = ${bar/bottom.linecolor}
+#background = #cc131313
+background = #181818
+foreground = #D0D0D0
+underline-color = ${bar/top.background}
 
-spacing = ${bar/bottom.spacing}
-lineheight = ${bar/bottom.lineheight}
-padding_right = ${bar/bottom.padding_right}
-module_margin_left = ${bar/bottom.module_margin_left}
-module_margin_right = ${bar/bottom.module_margin_right}
+spacing = 4
+underline-size = 2
+padding-left = 2
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
 
-font-0 = ${bar/bottom.font-0}
-font-1 = ${bar/bottom.font-1}
-font-2 = ${bar/bottom.font-2}
-font-3 = ${bar/bottom.font-3}
-font-4 = ${bar/bottom.font-4}
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=8;0
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=10;0
+font-3 = Siji:size=10;0
+font-4 = Monospace:size=10;0
 
 modules-left = i3
-modules-right = clock
-
+modules-center = 
+modules-right = disk-root cpu memory 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:70:...%
