@@ -4,4 +4,4 @@ alias http="http --style='native'"
 alias mv="mv -i"
 alias es="~/Documents/Tools/elasticsearch-2.4.0/bin/elasticsearch"
 alias kibana="~/Documents/Tools/kibana-4.6.0-linux-x86_64/bin/kibana"
-
+alias tor_chroot="sudo chroot --userspec=tor:tor /opt/torchroot /usr/bin/tor"
