@@ -1,0 +1,231 @@
+; [settings]
+; throttle_ms = 50
+; throttle_limit = 3
+
+[bar/top]
+monitor = DP-1
+width = 100%
+; height = 34
+height = 28
+clickareas = 35
+
+tray-background = #131313
+#background = #cc131313
+background = #181818
+foreground = #D0D0D0
+underline-color = ${bar/bottom.background}
+
+locale = fr_FR.UTF-8
+
+tray-position = right
+
+spacing = 4
+;spacing = 2
+underline-size = 2
+padding-left = 2
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
+;module_margin_left = 1
+;module_margin_right = 1
+
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=8;0
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=10;0
+font-3 = Siji:size=10;0
+font-4 = Monospace:size=10;0
+
+modules-center = xwindow
+modules-left = powermenu
+modules-right = updates bitcoin date
+
+[bar/bottom]
+bottom = true
+width = 100%
+height = 28
+dock = false
+
+#background = #cc131313
+background = #181818
+foreground = #D0D0D0
+linecolor = ${bar/top.background}
+
+spacing = 4
+lineheight = 2
+padding-left = 2
+padding-right = 5
+module-margin-left = 3
+module-margin-right = 3
+
+;font-0 = envypn:pixelsize=13;0
+font-0 = Sans-Regular:size=8;0
+font-1 = MaterialIcons:size=10;0
+; font-2 = Termsynu:size=8;-1
+font-2 = FontAwesome:size=10;0
+font-3 = Siji:size=10;0
+font-4 = Monospace:size=10;0
+
+modules-left = i3
+modules-center = 
+modules-right = disk-root cpu memory 
+
+[bar/external_bottom]
+;inherit_from = bar/bottom
+
+bottom = true
+width = ${bar/bottom.width}
+height = ${bar/bottom.height}
+
+background = ${bar/bottom.background}
+foreground = ${bar/bottom.foreground}
+linecolor = ${bar/bottom.linecolor}
+
+spacing = ${bar/bottom.spacing}
+lineheight = ${bar/bottom.lineheight}
+padding_right = ${bar/bottom.padding_right}
+module_margin_left = ${bar/bottom.module_margin_left}
+module_margin_right = ${bar/bottom.module_margin_right}
+
+font-0 = ${bar/bottom.font-0}
+font-1 = ${bar/bottom.font-1}
+font-2 = ${bar/bottom.font-2}
+font-3 = ${bar/bottom.font-3}
+font-4 = ${bar/bottom.font-4}
+
+modules-left = i3
+modules-right = clock
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:70:...%
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format = <label> <bar-load>
+label = CPU 
+
+bar-load-width = 20
+bar-load-foreground-0 = #aaff77
+bar-load-foreground-1 = #aaff77
+bar-load-foreground-2 = #fba922
+bar-load-foreground-3 = #ff5555
+bar-load-indicator = |
+bar-load-indicator-foreground = #ff
+bar-load-indicator-font = 4
+bar-load-fill = ─
+bar-load-fill-font = 4
+bar-load-empty = ─
+bar-load-empty-font = 4
+bar-load-empty-foreground = #444444
+
+[module/date]
+type = internal/date
+date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M%%{F-}
+
+[module/disk-root]
+type = custom/script
+format =     <label>
+exec = BLOCK_INSTANCE='/' ~/bin/disk | head -1
+
+[module/bitcoin]
+type = custom/script
+exec = ~/bin/bitcoin 
+format =   <label>
+tail = true
+interval = 5
+
+[module/updates]
+type = custom/script
+exec = ~/bin/update
+format =   <label>
+tail = true
+interval = 90
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+
+ws-icon-0 = 1;1: 
+ws-icon-1 = 2;2: 
+ws-icon-2 = 3;3: 
+ws-icon-3 = 4;4: 
+ws-icon-4 = 5;5: 
+ws-icon-5 = 6;6: ♟
+ws-icon-6 = 7;7: ♟ 
+ws-icon-7 = 8;8: 
+ws-icon-8 = 9;9: 
+ws-icon-9 = 10;10: 
+ws-icon-default = ♟
+
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #00FF65
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-visible = %icon%
+label-visible-underline = #555555
+label-visible-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 2
+
+[module/memory]
+type = internal/memory
+format = <label> <bar-used>
+label = RAM
+
+bar-used-width = 20
+bar-used-foreground-0 = #aaff77
+bar-used-foreground-1 = #aaff77
+bar-used-foreground-2 = #fba922
+bar-used-foreground-3 = #ff5555
+bar-used-indicator = |
+bar-used-indicator-foreground = #ff
+bar-used-indicator-font = 4
+bar-used-fill = ─
+bar-used-fill-font = 4
+bar-used-empty = ─
+bar-used-empty-font = 4
+bar-used-empty-foreground = #444444
+
+
+[module/powermenu]
+type = custom/menu
+
+format-padding = 1
+
+label-open = 
+label-close = 
+
+menu-0-0 = Reboot
+menu-0-0-foreground = #fba922
+menu-0-0-exec = menu_open-1
+menu-0-1 = Power off
+menu-0-1-foreground = #fba922
+menu-0-1-exec = menu_open-2
+
+menu-1-0 = Cancel
+menu-1-0-foreground = #fba922
+menu-1-0-exec = menu_open-0
+menu-1-1 = Reboot
+menu-1-1-foreground = #fba922
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = Power off
+menu-2-0-foreground = #fba922
+menu-2-0-exec = sudo poweroff
+menu-2-1 = Cancel
+menu-2-1-foreground = #fba922
+menu-2-1-exec = menu_open-0
+

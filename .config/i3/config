@@ -1,15 +1,15 @@
 # Constants
 set $mod Mod4
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
-set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
-set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
 
 set $Locker i3lock --color 475263 && sleep 1
 
@@ -105,9 +105,9 @@ bindsym $mod+Shift+agrave move container to workspace $workspace10
 # Program Workspaces
 assign [class="Firefox"] $workspace1
 assign [class="Thunar"] $workspace4 
-assign [class="chromium"] $workspace5
+assign [class="Chromium"] $workspace5
 assign [class="qTox"] $workspace9
-assign [class="slack"] $workspace6
+assign [class="Slack"] $workspace6
 # Floating
 for_window [class="Lxappearance"] floating enable
 for_window [class="Seahorse"] floating enable
@@ -161,26 +161,27 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 #Bar
-bar {
-		font pango: System San Francisco Display, FontAwesome 10 
-		status_command i3blocks
-		position bottom
-		tray_output primary
-		# strip_workspace_numbers yes
-		colors {
-			background $bg-color
-			separator #757575
-			#                  border             background         text
-			focused_workspace  $bg-color          $bg-color          $text-color
-			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-			}
-}
+#bar {
+#		font pango: System San Francisco Display, FontAwesome 10 
+#		status_command i3blocks
+#		position bottom
+#		tray_output primary
+#		# strip_workspace_numbers yes
+#		colors {
+#			background $bg-color
+#			separator #757575
+#			#                  border             background         text
+#			focused_workspace  $bg-color          $bg-color          $text-color
+#			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#			}
+#}
 
 
 bindsym $mod+d exec dmenu_run
 
 exec_always --no-startup-id feh --bg-scale /home/hugo/Pictures/wallpaper.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
 exec --no-startup-id compton -f
 
