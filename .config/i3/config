@@ -186,7 +186,7 @@ exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
 exec --no-startup-id compton -f
 
 #Power Management
-set $mode_system System (l) lock, (s) suspend ,(e) logout, (r) reboot, (Shift+s) shutdown
+set $mode_system      l  |    s  |    e  |    r  |    S
 mode "$mode_system" {
 	bindsym l exec --no-startup-id $Locker, mode "default"
 	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"

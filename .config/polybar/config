@@ -182,12 +182,15 @@ format-padding = 1
 label-open = 
 label-close = 
 
-menu-0-0 = Reboot
+menu-0-0 = Lock
 menu-0-0-foreground = #fba922
-menu-0-0-exec = menu_open-1
-menu-0-1 = Power off
+menu-0-0-exec = i3lock --color 475263
+menu-0-1 = Reboot
 menu-0-1-foreground = #fba922
-menu-0-1-exec = menu_open-2
+menu-0-1-exec = menu_open-1
+menu-0-2 = Power off
+menu-0-2-foreground = #fba922
+menu-0-2-exec = menu_open-2
 
 menu-1-0 = Cancel
 menu-1-0-foreground = #fba922
@@ -202,4 +205,3 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = Cancel
 menu-2-1-foreground = #fba922
 menu-2-1-exec = menu_open-0
-
