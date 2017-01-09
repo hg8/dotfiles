@@ -101,6 +101,8 @@ endif
 " Automatically close function preview windows
 autocmd CompleteDone * pclose 
 
+set autoindent noexpandtab tabstop=4 shiftwidth=4
 set background=dark
 let base16colorspace=256
 colorscheme base16-default-dark
+
