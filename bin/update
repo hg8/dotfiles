@@ -11,7 +11,7 @@ UPDATES=$(checkupdates | awk '{print $1;}')
 TOTAL=$(($COUNTARCH+$COUNTAUR))
 
 if [[ $TOTAL -ge 1 ]]; then
-	echo " "$TOTAL
+	echo $TOTAL
 	notify-send -t 600 -u normal "New Arch Linux Updates" "$UPDATES"
 fi
 
