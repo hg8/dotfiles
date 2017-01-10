@@ -46,8 +46,8 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
+xset +fp /home/hugo/.fonts
+xset fp rehash
 xrandr --dpi 220
 feh --bg-scale ~/Pictures/wallpaper.jpeg
 

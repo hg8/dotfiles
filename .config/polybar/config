@@ -38,8 +38,8 @@ font-3 = Siji:size=10;0
 font-4 = Monospace:size=10;0
 
 modules-center = xwindow
-modules-left = powermenu
-modules-right = updates bitcoin date
+modules-left = hostname
+modules-right = wired-network updates bitcoin date
 
 [bar/bottom]
 monitor = ${env:MONITOR}
@@ -50,10 +50,10 @@ height = 28
 #background = #cc131313
 background = #181818
 foreground = #D0D0D0
-linecolor = ${bar/top.background}
+underline-color = ${bar/top.background}
 
 spacing = 4
-lineheight = 2
+underline-size = 2
 padding-left = 2
 padding-right = 5
 module-margin-left = 3
@@ -174,34 +174,7 @@ bar-used-empty-font = 4
 bar-used-empty-foreground = #444444
 
 
-[module/powermenu]
-type = custom/menu
+[module/hostname]
+type = custom/text
+content = hugo
 
-format-padding = 1
-
-label-open = 
-label-close = 
-
-menu-0-0 = Lock
-menu-0-0-foreground = #fba922
-menu-0-0-exec = i3lock --color 475263
-menu-0-1 = Reboot
-menu-0-1-foreground = #fba922
-menu-0-1-exec = menu_open-1
-menu-0-2 = Power off
-menu-0-2-foreground = #fba922
-menu-0-2-exec = menu_open-2
-
-menu-1-0 = Cancel
-menu-1-0-foreground = #fba922
-menu-1-0-exec = menu_open-0
-menu-1-1 = Reboot
-menu-1-1-foreground = #fba922
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = Power off
-menu-2-0-foreground = #fba922
-menu-2-0-exec = sudo poweroff
-menu-2-1 = Cancel
-menu-2-1-foreground = #fba922
-menu-2-1-exec = menu_open-0
