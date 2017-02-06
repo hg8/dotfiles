@@ -39,7 +39,7 @@ font-4 = Monospace:size=10;0
 
 modules-center = xwindow
 modules-left = hostname
-modules-right = wired-network updates bitcoin date
+modules-right = updates bitcoin date
 
 [bar/bottom]
 monitor = ${env:MONITOR}
@@ -116,8 +116,8 @@ interval = 5
 type = custom/script
 exec = ~/bin/update
 format =   <label>
-tail = true
-interval = 90
+tail = false
+interval = 3600
 
 [module/i3]
 type = internal/i3
