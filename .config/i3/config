@@ -180,6 +180,10 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 
 bindsym $mod+d exec rofi -show run
+exec_always --no-startup-id feh --bg-scale /home/hugo/Pictures/wallpaper.jpg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
+exec --no-startup-id compton -f
 
 #Power Management
 set $mode_system      l  |    s  |    e  |    r  |    S
