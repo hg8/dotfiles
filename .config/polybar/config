@@ -38,8 +38,8 @@ font-3 = Siji:size=10;0
 font-4 = Monospace:size=10;0
 
 modules-center = xwindow
-modules-left = hostname
-modules-right = updates bitcoin date
+modules-left = weather
+modules-right = updates bitcoin date redshift
 
 [bar/bottom]
 monitor = ${env:MONITOR}
@@ -178,3 +178,14 @@ bar-used-empty-foreground = #444444
 type = custom/text
 content = hugo
 
+[module/redshift]
+type = custom/script
+interval = 5
+exec = ~/bin/redshift.sh
+
+[module/weather]
+type = custom/script
+interval = 3600
+format = <label>
+format-prefix = "  "
+exec = ~/bin/weather.py
