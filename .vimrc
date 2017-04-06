@@ -32,10 +32,19 @@ call vundle#begin()
     "-------------------=== Languages support ===-------------------
     Plugin 'tpope/vim-commentary'               " Comment stuff out
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
+    Plugin 'elixir-lang/vim-elixir'
 
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+
+    "-------------------=== Markdown ===---------------------------
+    Plugin 'godlygeek/tabular'
+    Plugin 'plasticboy/vim-markdown'
+    Plugin 'kylef/apiblueprint.vim'
+
+    "------------------=== Golang ===------------------------------
+    Plugin 'fatih/vim-go'
 
 call vundle#end()                           " required
 filetype on
@@ -141,6 +150,8 @@ let g:riv_disable_folding=1
 let g:pymode_python='python'
 let g:syntastic_python_python_exec='python'
 
+" let g:pymode_lint_ignore="E501"
+
 " rope
 let g:pymode_rope=0
 let g:pymode_rope_completion=0
@@ -155,7 +166,7 @@ let g:pymode_doc=0
 let g:pymode_doc_key='K'
 
 " lints
-let g:pymode_lint=0
+let g:pymode_lint=1
 
 " virtualenv
 let g:pymode_virtualenv=1

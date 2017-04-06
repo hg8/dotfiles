@@ -14,6 +14,8 @@ BULLETTRAIN_GIT_FG="white"
 plugins=(common-aliases dirhistory httpie python pip git sudo battery autojump virtualenvwrapper web-search)
 
 export WORKON_HOME=~/Envs
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$(go env GOPATH)/bin
 export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
