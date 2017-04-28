@@ -48,11 +48,8 @@ fi
 # unset f
 #fi
 
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
-
 setxkbmap -layout fr
 xrandr --dpi 220
-feh --bg-scale ~/Pictures/wp.jpeg
+feh --bg-scale ~/Pictures/wp-small.png
 
 exec i3
