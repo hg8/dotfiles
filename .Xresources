@@ -8,73 +8,14 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! ------------------------------------------------------------------------------
-! URxvt
-! ------------------------------------------------------------------------------
 
-! special
-*.foreground:   #babcc8
-*.background:  	#1D1F21 
-*.cursorColor:  #babcc8
-
-! black
-*.color0:       #000000
-*.color8:       #555555
-
-! red
-*.color1:       #dd5030
-*.color9:       #e17f64
-
-! green
-*.color2:       #6cbd3a
-*.color10:      #7fba5a
-
-! yellow
-*.color3:       #e6d72d
-*.color11:      #ffff55
-
-! blue
-*.color4:       #2670fc
-*.color12:      #5d8ff3
-
-! magenta
-*.color5:       #f258b9
-*.color13:      #fa83c0
-
-! cyan
-*.color6:       #38b2da
-*.color14:      #78cee7
-
-! white
-*.color7:       #bbbbbb
-*.color15:      #ffffff
-
-
-! 256 color space
-URxvt*color16:                        #db7b55
-URxvt*color17:                        #8a553f
-URxvt*color18:                        #8ec43d
-URxvt*color19:                        #3B758C
-URxvt*color20:                        #43a5d5
-URxvt*color21:                        #eeeeee
-
-URxvt.urgentOnBell: true
-URxvt.scrollBar: false
-URxvt.font: xft:hack::size=9, xft:Inconsolata for Powerline 
-URxvt.depth: 24
-URxvt.url-launcher: /usr/bin/firefox
-URxvt.matcher.button: 1
-URxvt.perl-ext-common: default,matcher,vtwheel,selection-to-clipboard
-
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
- rofi.color-enabled: true
- rofi.color-window: #2f343f, #002b36, argb:3c000000
- rofi.color-normal: #2f343f, #f3f4f5, #2f343f, #2f343f, #9575cd
- rofi.color-active: #fdf6e3, #268bd2, #eee8d5, #268bd2, #fdf6e3
- rofi.color-urgent: #fdf6e3, #dc322f, #eee8d5, #dc322f, #fdf6e3
+rofi.lines:                         6
+rofi.color-enabled:                 true
+rofi.separator-style:               solid
+rofi.width:                         34
+! rofi state:                        'bg'     'fg'   'bgalt' 'hlbg' 'hlfg'
+rofi.color-normal:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
+rofi.color-active:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
+rofi.color-urgent:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
+rofi.color-window:                  #181818,#a1b56c,#181818
+!
