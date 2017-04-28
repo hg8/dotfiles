@@ -1,3 +1,7 @@
+# hg8 dotfiles
+
+![2017-04-28-203000_3200x1800_scrot](https://cloud.githubusercontent.com/assets/9076747/25542361/875d716a-2c52-11e7-9241-dacb16cab2a3.png)
+
 My dotfiles, save me a few seconds when reinstalling my system. Also allow me to synchronize my configuration between multiple workstations. 
 
 ##Installation:
@@ -14,6 +18,4 @@ Whilst you will be able to use the `install.sh` script, you probably won't manag
     :PluginUpdate
 
 
-##Screenshot:
 
-![2016-09-01-203314_3200x1800_scrot](https://cloud.githubusercontent.com/assets/9076747/18180220/350c0b8e-7086-11e6-8037-2bec02dfecd3.png)
