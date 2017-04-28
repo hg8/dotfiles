@@ -1,15 +1,15 @@
 # Constants
 set $mod Mod4
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
-set $workspace5 "5: "
-set $workspace6 "6: "
-set $workspace7 "7: "
-set $workspace8 "8: "
-set $workspace9 "9: "
-set $workspace10 "10: "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+set $workspace10 "10"
 
 set $Locker i3lock -i ~/Pictures/wp-small.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e && sleep 1
 
@@ -106,16 +106,16 @@ bindsym $mod+Shift+agrave move container to workspace $workspace10
 # Program Workspaces
 assign [class="Firefox"] $workspace1
 assign [class="Thunar"] $workspace4 
-assign [class="chromium"] $workspace5
-assign [class="zathura"] $workspace6
+assign [class="Chromium"] $workspace5
+assign [class="Zathura"] $workspace6
 assign [class="smplayer"] $workspace6
-assign [class="gpicview"] $workspace6
-assign [class="vlc"] $workspace7
+assign [class="Gpicview"] $workspace6
+assign [class="Vlc"] $workspace7
 assign [class="qTox"] $workspace9
-assign [class="telegram-desktop"] $workspace9 
+assign [class="telegram-desktop"] $workspace8 
 #bug with the beta client, workaround :
 #assign [class="spotify"] $workspace10
-for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Spotify"] move to workspace $workspace9
 
 # Floating
 for_window [class="Lxappearance"] floating enable
@@ -175,26 +175,28 @@ client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-col
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 #Bar
-bar {
-		font pango: System San Francisco Display, FontAwesome 9 
-		status_command i3blocks
-		position bottom
-		# strip_workspace_numbers yes
-		colors {
-			background $bg-color
-			separator #757575
-			#                  border             background         text
-			focused_workspace  $bg-color          $bg-color        	 $text-color
-			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-			}
-}
+#bar {
+#		font pango: System San Francisco Display, FontAwesome 9 
+#		status_command i3blocks
+#		position bottom
+#		# strip_workspace_numbers yes
+#		colors {
+#			background $bg-color
+#			separator #757575
+#			#                  border             background         text
+#			focused_workspace  $bg-color          $bg-color        	 $text-color
+#			inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#			urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#			}
+#}
 
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -font "System San Francisco Display 38"
+bindsym $mod+d exec rofi -show run -font "System San Francisco Display 28"
 
-bindsym XF86Search exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85" -bw 0 -font "System San Francisco Display 38"
+bindsym XF86Search exec rofi -show run -font "System San Francisco Display 28"
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Multimedia Keys
 # increase volume
@@ -218,7 +220,7 @@ exec --no-startup-id dunst
 exec --no-startup-id battery-notifications
 
 #Power Management
-set $mode_system System (l) lock, (s) suspend ,(e) logout, (r) reboot, (Shift+s) shutdown
+set $mode_system  l |  s |  e |  r |  S
 mode "$mode_system" {
 	bindsym l exec --no-startup-id $Locker, mode "default"
 	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
