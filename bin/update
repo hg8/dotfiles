@@ -11,10 +11,7 @@ UPDATES=$(checkupdates | awk '{print $1;}')
 TOTAL=$(($COUNTARCH+$COUNTAUR))
 
 if [[ $TOTAL -ge 1 ]]; then
-	echo " "$TOTAL
-	notify-send -t 60 -u normal "New Arch Linux Updates" "$UPDATES"
+	echo $TOTAL
+	#notify-send -t 60 -u normal "New Arch Linux Updates" "$UPDATES"
 fi
 
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-	urxvt -e pacaur -Syu ; 
-fi
