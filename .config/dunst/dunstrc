@@ -9,8 +9,8 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "450x5-30+20"
-    transparency = 10
+    geometry = "450x5-30+60"
+    transparency = 0
     idle_threshold = 90
     monitor = 1
     follow = mouse
@@ -25,8 +25,8 @@
     browser = /usr/bin/firefox -new-tab
 
 [frame]
-    width = 0
-    color = "#222222"
+    width = 2
+    color = "#A1B56C"
 
 [shortcuts]
     close = ctrl+space
@@ -35,16 +35,16 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#334A5D"
+    background = "#181818"
     foreground = "#ffffff"
     timeout = 10
 
 [urgency_normal]
-    background = "#334A5D"
+    background = "#181818"
     foreground = "#ffffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#A54242"
-    foreground = "#ffffff"
+    background = "#181818"
+    foreground = "#AB4642"
     timeout = 0
