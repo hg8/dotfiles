@@ -20,19 +20,14 @@ locale = fr_FR.UTF-8
 tray-position = right
 
 spacing = 4
-;spacing = 2
 underline-size = 2
 padding-left = 2
 padding-right = 5
 module-margin-left = 3
 module-margin-right = 3
-;module_margin_left = 1
-;module_margin_right = 1
 
-;font-0 = envypn:pixelsize=13;0
 font-0 = Sans-Regular:size=8;0
 font-1 = MaterialIcons:size=10;0
-; font-2 = Termsynu:size=8;-1
 font-2 = FontAwesome:size=10;0
 font-3 = Siji:size=10;0
 font-4 = Monospace:size=10;0
@@ -59,17 +54,15 @@ padding-right = 5
 module-margin-left = 3
 module-margin-right = 3
 
-;font-0 = envypn:pixelsize=13;0
 font-0 = Sans-Regular:size=8;0
 font-1 = MaterialIcons:size=10;0
-; font-2 = Termsynu:size=8;-1
 font-2 = FontAwesome:size=10;0
 font-3 = Siji:size=10;0
 font-4 = Monospace:size=10;0
 
 modules-left = i3
 modules-center = 
-modules-right = disk-root cpu memory 
+modules-right = wired-network filesystem cpu memory 
 
 [module/xwindow]
 type = internal/xwindow
@@ -80,7 +73,7 @@ label = %title:0:70:...%
 type = internal/cpu
 interval = 2
 format = <label> <bar-load>
-label = CPU 
+label = 
 
 bar-load-width = 20
 bar-load-foreground-0 = #aaff77
@@ -99,11 +92,6 @@ bar-load-empty-foreground = #444444
 [module/date]
 type = internal/date
 date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M%%{F-}
-
-[module/disk-root]
-type = custom/script
-format =     <label>
-exec = BLOCK_INSTANCE='/' ~/bin/disk | head -1
 
 [module/bitcoin]
 type = custom/script
@@ -157,7 +145,7 @@ label-urgent-padding = 2
 [module/memory]
 type = internal/memory
 format = <label> <bar-used>
-label = RAM
+label =  
 
 bar-used-width = 20
 bar-used-foreground-0 = #aaff77
@@ -172,7 +160,6 @@ bar-used-fill-font = 4
 bar-used-empty = ─
 bar-used-empty-font = 4
 bar-used-empty-foreground = #444444
-
 
 [module/hostname]
 type = custom/text
@@ -189,3 +176,20 @@ interval = 3600
 format = <label>
 format-prefix = "  "
 exec = ~/bin/weather.py
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+mount-1 = /home
+interval = 10
+fixed-values = true
+spacing = 4
+label-mounted =    %mountpoint%: %percentage_used%%
+
+[module/wired-network]
+type = internal/network
+interface = enp1s0
+
+label-connected =   %local_ip%
+label-disconnected = Ethernet disconnected
+label-disconnected-foreground = #66

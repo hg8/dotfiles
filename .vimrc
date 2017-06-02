@@ -22,6 +22,7 @@ call vundle#begin()
     Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'chriskempson/base16-vim'
+    Plugin 'pangloss/vim-javascript'
 
     "-------------------=== Snippets support ===--------------------
     Plugin 'garbas/vim-snipmate'                " Snippets manager
@@ -260,3 +261,6 @@ set splitright
 
 " Quit insert mode with jj
 inoremap jj <Esc>
+
+" Go
+set autowrite

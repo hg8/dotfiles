@@ -9,7 +9,7 @@
     show_age_threshold = 60
     word_wrap = yes
     ignore_newline = no
-    geometry = "300x5-30+10"
+    geometry = "250x5-5+35"
     transparency = 10
     idle_threshold = 90
     monitor = 0
@@ -25,8 +25,9 @@
     browser = /usr/bin/firefox -new-tab
 
 [frame]
-    width = 0
-    color = "#222222"
+    width = 1
+    color = "#ffffff"
+    # color = "#a1b56c"
 
 [shortcuts]
     close = ctrl+space
