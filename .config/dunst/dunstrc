@@ -1,6 +1,6 @@
 [global]
-    font = "San Francisco Display 26"
-    allow_markup = yes
+    font = "San Francisco Display 12"
+    markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
     indicate_hidden = yes
@@ -23,15 +23,12 @@
     startup_notification = false
     dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/firefox -new-tab
-
-[frame]
-    width = 2
-    color = "#A1B56C"
+    frame_width = 2
+    frame_color = "#A1B56C"
 
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
-    history = ctrl+grave
     context = ctrl+shift+period
 
 [urgency_low]
