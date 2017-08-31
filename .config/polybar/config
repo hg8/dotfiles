@@ -33,8 +33,8 @@ font-3 = Siji:size=10;0
 font-4 = Monospace:size=10;0
 
 modules-center = xwindow
-modules-left = weather
-modules-right = updates bitcoin date redshift
+modules-left = bitcoin bitcoincash eth xmr
+modules-right = updates date
 
 [bar/bottom]
 monitor = ${env:MONITOR}
@@ -96,7 +96,28 @@ date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M%%{F-}
 [module/bitcoin]
 type = custom/script
 exec = ~/bin/bitcoin 
-format =   <label>
+format = BTC <label>
+tail = true
+interval = 5
+
+[module/bitcoincash]
+type = custom/script
+exec = ~/bin/bitcoin-cash
+format = BCH <label>
+tail = true
+interval = 5
+
+[module/eth]
+type = custom/script
+exec = ~/bin/eth
+format = ETH <label>
+tail = true
+interval = 5
+
+[module/xmr]
+type = custom/script
+exec = ~/bin/xmr
+format = XMR <label>
 tail = true
 interval = 5
 
@@ -165,18 +186,6 @@ bar-used-empty-foreground = #444444
 type = custom/text
 content = hugo
 
-[module/redshift]
-type = custom/script
-interval = 5
-exec = ~/bin/redshift.sh
-
-[module/weather]
-type = custom/script
-interval = 3600
-format = <label>
-format-prefix = "  "
-exec = ~/bin/weather.py
-
 [module/filesystem]
 type = internal/fs
 mount-0 = /
@@ -188,7 +197,7 @@ label-mounted =    %mountpoint%: %percentage_used%%
 
 [module/wired-network]
 type = internal/network
-interface = enp1s0
+interface = enp33s0
 
 label-connected =   %local_ip%
 label-disconnected = Ethernet disconnected

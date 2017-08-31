@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+import os
+import webbrowser
+import requests
+
+if os.environ.get("BLOCK_BUTTON") == "1":
+    webbrowser.open_new_tab('https://www.tradingview.com/chart/ksRH38rk/')
+
+try:
+    r = requests.get('https://api.kraken.com/0/public/Ticker?pair=BCHEUR')
+    ticker = r.json()
+
+    print('%.2f€' % float(ticker['result']['BCHEUR']['c'][0]))
+
+except Exception:
+    print('error')
+    print('error')
+    print('#ff0000')

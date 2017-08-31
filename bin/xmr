@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+import requests
+
+try:
+    r = requests.get('https://api.kraken.com/0/public/Ticker?pair=XMREUR')
+    ticker = r.json()
+    print('%.2f€' % float(ticker['result']['XXMRZEUR']['c'][0]))
+
+except Exception:
+    print('error')
+    print('error')
+    print('#ff0000')
