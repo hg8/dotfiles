@@ -33,7 +33,6 @@ call vundle#begin()
     "-------------------=== Languages support ===-------------------
     Plugin 'tpope/vim-commentary'               " Comment stuff out
     Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
-    Plugin 'elixir-lang/vim-elixir'
 
     "-------------------=== Python  ===-----------------------------
     Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
@@ -42,7 +41,6 @@ call vundle#begin()
     "-------------------=== Markdown ===---------------------------
     Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
-    Plugin 'kylef/apiblueprint.vim'
 
     "------------------=== Golang ===------------------------------
     Plugin 'fatih/vim-go'
@@ -72,6 +70,8 @@ set shiftwidth=4                            " shift lines by 4 spaces
 set smarttab                                " set tabs for a shifttabs logic
 set expandtab                               " expand tabs into spaces
 set autoindent                              " indent when moving to the next line while writing code
+
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 
 " set cursorline                              " shows line under the cursor's line
 set showmatch                               " shows matching part of bracket pairs (), [], {}

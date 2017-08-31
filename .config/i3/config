@@ -105,6 +105,7 @@ bindsym $mod+Shift+agrave move container to workspace $workspace10
 # Program Workspaces
 assign [class="Firefox"] $workspace1
 assign [class="Thunar"] $workspace4 
+assign [class="Pcmanfm"] $workspace4 
 assign [class="Chromium"] $workspace5
 assign [class="qTox"] $workspace9
 assign [class="Slack"] $workspace6
@@ -113,6 +114,7 @@ assign [class="TelegramDesktop"] $workspace10
 for_window [class="Lxappearance"] floating enable
 for_window [class="Seahorse"] floating enable
 for_window [class="Thunar"] floating enable
+for_window [class="Pcmanfm"] floating enable
 for_window [class="qTox"] floating enable
 
 # reload the configuration file
