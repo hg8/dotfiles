@@ -2,9 +2,9 @@
 import requests
 
 try:
-    r = requests.get('https://api.kraken.com/0/public/Ticker?pair=XMREUR')
+    r = requests.get('https://api.kraken.com/0/public/Ticker?pair=XMRUSD')
     ticker = r.json()
-    print('%.2f€' % float(ticker['result']['XXMRZEUR']['c'][0]))
+    print('%.2f$' % float(ticker['result']['XXMRZUSD']['c'][0]))
 
 except Exception:
     print('error')
