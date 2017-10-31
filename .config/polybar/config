@@ -62,7 +62,7 @@ font-4 = Monospace:size=10;0
 
 modules-left = i3
 modules-center = 
-modules-right = wired-network filesystem cpu memory 
+modules-right = stats filesystem cpu memory 
 
 [module/xwindow]
 type = internal/xwindow
@@ -118,6 +118,13 @@ interval = 5
 type = custom/script
 exec = ~/bin/xmr
 format = XMR <label>
+tail = true
+interval = 5
+
+[module/stats]
+type = custom/script
+exec = ~/bin/stats
+format =  <label>
 tail = true
 interval = 5
 
