@@ -11,7 +11,8 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-set $Locker i3lock --color 475263 && sleep 1
+set $wallpaper /home/hugo/Pictures/wallpaper.png
+set $Locker i3lock -t -i /home/hugo/Pictures/wallpaper.png && sleep 1
 
 # General config
 font pango:System San Francisco Display, Awesome 10
@@ -31,7 +32,8 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # lock
-bindsym $mod+Shift+x exec --no-startup-id i3lock --color 475263
+bindsym $mod+Shift+x exec --no-startup-id $Locker && sleep 1
+
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -184,9 +186,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 bindsym $mod+d exec rofi -show run
 bindsym Menu exec rofi -show run
-exec_always --no-startup-id feh --bg-scale /home/hugo/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale $wallpaper
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id xautolock -time 10 -locker $Locker  -lockaftersleep &
+exec --no-startup-id xautolock -time 10 -locker $Locker -lockaftersleep &
 exec --no-startup-id compton -f
 exec --no-startup-id redshift
 exec --no-startup-id workrave
