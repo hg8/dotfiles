@@ -15,7 +15,7 @@ background = #181818
 foreground = #D0D0D0
 underline-color = ${bar/bottom.background}
 
-locale = fr_FR.UTF-8
+locale = en_US.UTF-8
 
 tray-position = right
 

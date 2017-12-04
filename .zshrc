@@ -16,6 +16,7 @@ plugins=(common-aliases dirhistory python pip git sudo virtualenvwrapper autojum
 export WORKON_HOME=~/Envs
 export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/dsa_id"
+export GPG_TTY=$(tty)
 setopt HIST_IGNORE_SPACE
 
 source $ZSH/oh-my-zsh.sh

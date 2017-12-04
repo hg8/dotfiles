@@ -1,6 +1,7 @@
 [user]
 	email = hforestier@protonmail.com 
 	name = Hugo F.
+	signingkey = CB212F5BA4AA796B
 
 [color]
 	ui = auto
