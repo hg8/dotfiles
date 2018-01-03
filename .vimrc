@@ -264,3 +264,11 @@ inoremap jj <Esc>
 
 " Go
 set autowrite
+
+let g:syntastic_python_flake8_args='--ignore=E501'
+let g:ale_python_flake8_args="--ignore=E501"
+
+set cursorline
+set clipboard+=unnamedplus
+set guicursor=
+let g:pymode_python = 'python3'

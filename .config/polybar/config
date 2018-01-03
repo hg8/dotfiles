@@ -28,9 +28,12 @@ module-margin-right = 3
 
 font-0 = Sans-Regular:size=8;0
 font-1 = MaterialIcons:size=10;0
-font-2 = FontAwesome:size=10;0
-font-3 = Siji:size=10;0
-font-4 = Monospace:size=10;0
+font-2 = Siji:size=10;0
+font-3 = Monospace:size=10;0
+font-4 = "Font Awesome 5 Free:style=Regular:antialias=false:size=10;0"
+font-5 = "Font Awesome 5 Free:style=Solid:antialias=false:size=10;0"
+font-6 = "Font Awesome 5 Brands:style=Regular:antialias=false:size=10;0"
+
 
 modules-center = xwindow
 modules-left = bitcoin bitcoincash eth xmr
@@ -54,11 +57,14 @@ padding-right = 5
 module-margin-left = 3
 module-margin-right = 3
 
-font-0 = Sans-Regular:size=8;0
-font-1 = MaterialIcons:size=10;0
-font-2 = FontAwesome:size=10;0
-font-3 = Siji:size=10;0
-font-4 = Monospace:size=10;0
+font-0 = Sans-Regular:antialias=false:size=8;0
+font-1 = MaterialIcons:antialias=false:size=10;0
+font-2 = Siji:antialias=false:size=10;0
+font-3 = Monospace:antialias=false:size=10;0
+font-4 = "Font Awesome 5 Brands Regular:style=Regular:antialias=true:size=10;2"
+font-5 = "Font Awesome 5 Free Solid:style=Solid:antialias=true:size=8;0"
+font-6 = "Font Awesome 5 Free Regular:style=Regular:antialias=true:size=8;0"
+
 
 modules-left = i3
 modules-center = 
