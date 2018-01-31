@@ -5,8 +5,10 @@ import requests
 try:
     r = requests.get('https://api.kraken.com/0/public/Ticker?pair=ETHUSD')
     ticker = r.json()
+    price = ticker['result']['XETHZUSD']['c'][0]
+    price = int(float(price))
 
-    print('%.2f$' % float(ticker['result']['XETHZUSD']['c'][0]))
+    print(' {:,} '.format(price))
 
 except Exception:
     print('error')

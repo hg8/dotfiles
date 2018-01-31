@@ -5,13 +5,13 @@
 
 #echo "$(checkupdates|wc -l)+$(cower -u|wc -l)"|bc -l
 COUNTARCH=$(checkupdates|wc -l)
-COUNTAUR=$(cower -u|wc -l)
+COUNTAUR=$(cower -u --timeout=0|wc -l)
 UPDATES=$(checkupdates | awk '{print $1;}')
 
 TOTAL=$(($COUNTARCH+$COUNTAUR))
 
 if [[ $TOTAL -ge 1 ]]; then
-	echo $TOTAL
+	echo " $TOTAL "
 	#notify-send -t 600 -u normal "New Arch Linux Updates" "$UPDATES"
 fi
 

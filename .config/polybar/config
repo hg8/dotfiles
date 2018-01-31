@@ -1,123 +1,158 @@
-; [settings]
-; throttle_ms = 50
-; throttle_limit = 3
+[colors]
+background = #2B2C33
+background-alt = #f0f0f0
+foreground = #f0f0f0
+foreground-alt = #2d2d2d
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
 
 [bar/top]
 monitor = ${env:MONITOR}
 width = 100%
-; height = 34
-height = 28
-clickareas = 35
+height = 24
+radius = 0
+fixed-center = true
 
-tray-background = #131313
-#background = #cc131313
-background = #181818
-foreground = #D0D0D0
-underline-color = ${bar/bottom.background}
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = #f00
+
+border-size = 6
+border-color = ${colors.background}
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Gohu GohuFont:style=Regular:pixelsize=8;2
+font-1 = Wuncon Siji:style=Regular:antialias=false;2
+font-2 = Sans-Regular:size=11:antialias=false;2
 
 locale = en_US.UTF-8
 
 tray-position = right
+tray-padding = 2
 
-spacing = 4
-underline-size = 2
-padding-left = 2
-padding-right = 5
-module-margin-left = 3
-module-margin-right = 3
-
-font-0 = Sans-Regular:size=8;0
-font-1 = MaterialIcons:size=10;0
-font-2 = Siji:size=10;0
-font-3 = Monospace:size=10;0
-font-4 = "Font Awesome 5 Free:style=Regular:antialias=false:size=10;0"
-font-5 = "Font Awesome 5 Free:style=Solid:antialias=false:size=10;0"
-font-6 = "Font Awesome 5 Brands:style=Regular:antialias=false:size=10;0"
-
+cursor-click = pointer
+cursor-scroll = ns-resize
 
 modules-center = xwindow
-modules-left = bitcoin bitcoincash eth xmr
-modules-right = updates date
+modules-left = system i3
+modules-right = updates stats btc eth memory cpu date
 
-[bar/bottom]
-monitor = ${env:MONITOR}
-bottom = true
-width = 100%
-height = 28
+[module/system]
+type = custom/script
+exec = echo " "
+format = <label>
+label = " Arch "
+label-background = #6D8EC1
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
 
-#background = #cc131313
-background = #181818
-foreground = #D0D0D0
-underline-color = ${bar/top.background}
+[module/i3]
+type = internal/i3
 
-spacing = 4
-underline-size = 2
-padding-left = 2
-padding-right = 5
-module-margin-left = 3
-module-margin-right = 3
+pin-workspaces = true
 
-font-0 = Sans-Regular:antialias=false:size=8;0
-font-1 = MaterialIcons:antialias=false:size=10;0
-font-2 = Siji:antialias=false:size=10;0
-font-3 = Monospace:antialias=false:size=10;0
-font-4 = "Font Awesome 5 Brands Regular:style=Regular:antialias=true:size=10;2"
-font-5 = "Font Awesome 5 Free Solid:style=Solid:antialias=true:size=8;0"
-font-6 = "Font Awesome 5 Free Regular:style=Regular:antialias=true:size=8;0"
+ws-icon-0 = 1;1: 
+ws-icon-1 = 2;2: 
+ws-icon-2 = 3;3: 
+ws-icon-3 = 4;4: 
+ws-icon-4 = 5;5: 
+ws-icon-5 = 6;6: 
+ws-icon-6 = 7;7:  
+ws-icon-7 = 8;8:  
+ws-icon-8 = 9;9: 
+ws-icon-9 = 10;10: 
+ws-icon-default = 
 
+label-focused = %icon%
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-padding = 1
 
-modules-left = i3
-modules-center = 
-modules-right = stats filesystem cpu memory 
+label-unfocused = %icon%
+label-unfocused-padding = 1
+
+label-visible = %icon%
+label-visible-padding = 1
+
+label-occupied = %icon%
+label-occupied-padding = 1
+
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = #666
+label-empty-padding = 1
+
+[module/updates]
+type = custom/script
+exec = ~/bin/update
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
+interval = 3600
+
+[module/date]
+type = internal/date
+interval = 5
+time = " %H:%M "
+time-alt = " %d/%m/%y "
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label = %time%
+label-background = #6D8EC1
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:70:...%
 
-
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = <label> <bar-load>
-label = 
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label =  " %percentage:2%% "
+label-background = #6D8EC1
 
-bar-load-width = 20
-bar-load-foreground-0 = #aaff77
-bar-load-foreground-1 = #aaff77
-bar-load-foreground-2 = #fba922
-bar-load-foreground-3 = #ff5555
-bar-load-indicator = |
-bar-load-indicator-foreground = #ff
-bar-load-indicator-font = 4
-bar-load-fill = ─
-bar-load-fill-font = 4
-bar-load-empty = ─
-bar-load-empty-font = 4
-bar-load-empty-foreground = #444444
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
+label = " %percentage_used%% "
 
-[module/date]
-type = internal/date
-date =    %%{F#999}%a %e %b%%{F-}  %%{F#fff}%H:%M%%{F-}
-
-[module/bitcoin]
+[module/btc]
 type = custom/script
 exec = ~/bin/bitcoin 
-format = BTC <label>
-tail = true
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
 interval = 5
 
-[module/bitcoincash]
-type = custom/script
-exec = ~/bin/bitcoin-cash
-format = BCH <label>
-tail = true
-interval = 5
 
 [module/eth]
 type = custom/script
-exec = ~/bin/eth
-format = ETH <label>
-tail = true
+exec = ~/bin/eth 
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
 interval = 5
 
 [module/xmr]
@@ -130,88 +165,8 @@ interval = 5
 [module/stats]
 type = custom/script
 exec = ~/bin/stats
-format =  <label>
-tail = true
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
 interval = 5
-
-[module/updates]
-type = custom/script
-exec = ~/bin/update
-format =   <label>
-tail = false
-interval = 3600
-
-[module/i3]
-type = internal/i3
-
-pin-workspaces = true
-
-ws-icon-0 = 1;1: 
-ws-icon-1 = 2;2: 
-ws-icon-2 = 3;3: 
-ws-icon-3 = 4;4: 
-ws-icon-4 = 5;5: 
-ws-icon-5 = 6;6: ♟
-ws-icon-6 = 7;7: ♟ 
-ws-icon-7 = 8;8: 
-ws-icon-8 = 9;9: 
-ws-icon-9 = 10;10: 
-ws-icon-default = ♟
-
-label-focused = %icon%
-label-focused-foreground = #ffffff
-label-focused-background = #3f3f3f
-label-focused-underline = #00FF65
-label-focused-padding = 2
-
-label-unfocused = %icon%
-label-unfocused-padding = 2
-
-label-visible = %icon%
-label-visible-underline = #555555
-label-visible-padding = 2
-
-label-urgent = %icon%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-padding = 2
-
-[module/memory]
-type = internal/memory
-format = <label> <bar-used>
-label =  
-
-bar-used-width = 20
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
-bar-used-indicator = |
-bar-used-indicator-foreground = #ff
-bar-used-indicator-font = 4
-bar-used-fill = ─
-bar-used-fill-font = 4
-bar-used-empty = ─
-bar-used-empty-font = 4
-bar-used-empty-foreground = #444444
-
-[module/hostname]
-type = custom/text
-content = hugo
-
-[module/filesystem]
-type = internal/fs
-mount-0 = /
-mount-1 = /home
-interval = 10
-fixed-values = true
-spacing = 4
-label-mounted =    %mountpoint%: %percentage_used%%
-
-[module/wired-network]
-type = internal/network
-interface = enp33s0
-
-label-connected =   %local_ip%
-label-disconnected = Ethernet disconnected
-label-disconnected-foreground = #66

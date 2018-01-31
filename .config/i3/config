@@ -199,7 +199,7 @@ exec --no-startup-id chromium
 
 
 #Power Management
-set $mode_system      l  |    s  |    e  |    r  |    S
+set $mode_system      l  |     r  |    S
 mode "$mode_system" {
 	bindsym l exec --no-startup-id $Locker, mode "default"
 	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"

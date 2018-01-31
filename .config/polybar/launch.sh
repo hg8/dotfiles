@@ -8,5 +8,4 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar1 and bar2
 MONITOR=DVI-D-1 polybar top &
-MONITOR=DVI-D-1 polybar bottom &
-MONITOR=VGA-1 polybar bottom &
+MONITOR=VGA-1 polybar top &
