@@ -43,7 +43,7 @@ cursor-scroll = ns-resize
 
 modules-center = xwindow
 modules-left = system i3
-modules-right = updates stats btc eth memory cpu date
+modules-right = shadow updates btc eth memory cpu date
 
 [module/system]
 type = custom/script
@@ -170,3 +170,12 @@ format-prefix-background = ${colors.background-alt}
 format-prefix-foreground = ${colors.foreground-alt}
 label-background = #6D8EC1
 interval = 5
+
+[module/shadow]
+type = custom/script
+exec = ~/bin/shadow
+format-prefix = "  "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.foreground-alt}
+label-background = #6D8EC1
+interval = 3600

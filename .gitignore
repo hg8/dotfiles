@@ -2,3 +2,4 @@
 *.swp
 bookmarks 
 bin/stats
+bin/shadow
