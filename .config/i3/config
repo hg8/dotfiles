@@ -11,7 +11,7 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-set $Locker i3lock -i ~/Pictures/wp-small.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e && sleep 1
+set $Locker i3lock -i ~/Pictures/Wallpapers/wall.png -c '#000000' -o '#191d0f' -w '#572020' -l '#ffffff' -e && sleep 1
 
 # General config
 font pango:System San Francisco Display, Awesome 8
@@ -105,12 +105,12 @@ bindsym $mod+Shift+agrave move container to workspace $workspace10
 
 # Program Workspaces
 assign [class="Firefox"] $workspace1
-assign [class="Thunar"] $workspace4 
+assign [class="Pcmanfm"] $workspace4 
 assign [class="Chromium"] $workspace5
 assign [class="Zathura"] $workspace6
 assign [class="smplayer"] $workspace6
 assign [class="Gpicview"] $workspace6
-assign [class="Vlc"] $workspace7
+assign [class="vlc"] $workspace7
 assign [class="qTox"] $workspace9
 assign [class="telegram-desktop"] $workspace8 
 #bug with the beta client, workaround :
@@ -120,7 +120,7 @@ for_window [class="Spotify"] move to workspace $workspace9
 # Floating
 for_window [class="Lxappearance"] floating enable
 for_window [class="Seahorse"] floating enable
-for_window [class="Thunar"] floating enable
+for_window [class="Pcmanfm"] floating enable
 for_window [class="qTox"] floating enable
 for_window [class="telegram-desktop"] floating enable
 for_window [class="gpa"] floating enable
@@ -215,6 +215,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id  light -A 10 # increase screen 
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
 
 exec --no-startup-id xautolock -time 10 -locker $Locker &
+exec --no-startup-id xss-lock -- $Locker &
 exec --no-startup-id compton -f
 exec --no-startup-id dunst
 exec --no-startup-id battery-notifications

@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -20,7 +21,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'mbbill/undotree'
-Plugin 'chriskempson/base16-vim'
 
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -42,7 +42,7 @@ set statusline+=%*
 
 " Powerline for Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16'
+let g:airline_theme='hybrid'
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -102,5 +102,6 @@ endif
 " Automatically close function preview windows
 autocmd CompleteDone * pclose 
 
-let base16colorspace=256
-colorscheme base16-default-dark
+set background=dark
+colorscheme hybrid
+

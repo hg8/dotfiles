@@ -31,30 +31,36 @@ filter_unmatched_urls = true
 # emit escape sequences for extra modified keys
 #modify_other_keys = false
 
-
 [colors]
-background = "#161719"
-cursor = "#b7bcba"
-foreground = "#b7bcba"
-color0 = #2a2e33
-color1 = #b84d51
-color2 = #b3bf5a
-color3 = #e4b55e
-color4 = #6e90b0
-color5 = #a17eac
-color6 = #7fbfb4
-color7 = #b5b9b6
-color8 = #1d1f22
-color9 = #8d2e32
-color10 = #798431
-color11 = #e58a50
-color12 = #4b6b88
-color13 = #6e5079
-color14 = #4d7b74
-color15 = #5a626a
-colorBD = #b7bcba
-colorIT =
-colorUL =
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
+foreground = #d6d6d6
+foreground_bold = #ffffff
+background = #1C1C1C
+
+# 20% background transparency (requires a compositor)
+#background = rgba(63, 63, 63, 0.8)
+
+# if unset, will reverse foreground and background
+highlight = #2f2f2f
+
+# colors from color0 to color254 can be set
+color0 = #151718
+color1 = #cd3f45
+color2 = #9fca56
+color3 = #e6cd69
+color4 = #55b5db
+color5 = #a074c4
+color6 = #55dbbe
+color7 = #d6d6d6
+color8 = #4153b
+color9 = #cd3f45
+color10 = #9fca56
+color11 = #e6cd69
+color12 = #55b5db
+color13 = #a074c4
+color14 = #55dbbe
+color15 = #ffffff
 
 [hints]
 font = Source Code Pro 9
