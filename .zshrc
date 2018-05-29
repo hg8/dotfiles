@@ -35,3 +35,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 genstring() {
     strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 14 | tr -d '\n'; echo
 }
+
+function swap()         
+{
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE && mv "$2" "$1" && mv $TMPFILE $2
+}

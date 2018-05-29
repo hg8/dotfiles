@@ -5,8 +5,7 @@
 
 #echo "$(checkupdates|wc -l)+$(cower -u|wc -l)"|bc -l
 COUNTARCH=$(checkupdates|wc -l)
-COUNTAUR=$(cower -u --timeout=0|wc -l)
-UPDATES=$(checkupdates | awk '{print $1;}')
+COUNTAUR=$(trizen -Su --aur --quiet | wc -l)
 
 TOTAL=$(($COUNTARCH+$COUNTAUR))
 

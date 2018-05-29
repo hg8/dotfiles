@@ -7,3 +7,5 @@ alias lamp="sudo systemctl start httpd.service && sudo mysqld_safe --datadir=/ho
 alias hibp='f() { http --body "https://haveibeenpwned.com/api/v2/breachedaccount/$1?includeUnverified=true" };f'
 alias vim='nvim'
 alias xclip='xclip -selection c'
+alias ip='ip --color'
+

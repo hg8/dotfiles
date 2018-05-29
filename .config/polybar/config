@@ -96,7 +96,7 @@ label-empty-padding = 1
 
 [module/updates]
 type = custom/script
-exec = ~/bin/update
+exec = ~/bin/arch-aur-updates
 format-prefix = "  "
 format-prefix-background = ${colors.background-alt}
 format-prefix-foreground = ${colors.foreground-alt}
