@@ -43,7 +43,7 @@ cursor-scroll = ns-resize
 
 modules-center = xwindow
 modules-left = system i3
-modules-right = shadow updates btc eth memory cpu date
+modules-right = stats shadow updates btc eth memory cpu date
 
 [module/system]
 type = custom/script
