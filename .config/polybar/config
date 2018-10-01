@@ -10,6 +10,7 @@ background = #E6181818
 foreground = #f5f5f5
 foreground-alt = #555555
 dpi = 220
+monitor = ${env:MONITOR:}
 
 locale = en_US.UTF-8
 
@@ -86,7 +87,7 @@ animation-packetloss-framerate = 500
 
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 
@@ -180,7 +181,7 @@ interval = 5
 
 [module/updates]
 type = custom/script
-exec = ~/bin/update
+exec = ~/bin/arch-aur-updates
 format =    <label>
 tail = true
 interval = 90

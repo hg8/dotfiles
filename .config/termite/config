@@ -31,28 +31,27 @@ filter_unmatched_urls = true
 # emit escape sequences for extra modified keys
 #modify_other_keys = false
 
-
 [colors]
-background = "#161719"
-cursor = "#b7bcba"
-foreground = "#b7bcba"
-color0 = #2a2e33
-color1 = #b84d51
-color2 = #b3bf5a
-color3 = #e4b55e
-color4 = #6e90b0
-color5 = #a17eac
-color6 = #7fbfb4
-color7 = #b5b9b6
-color8 = #1d1f22
-color9 = #8d2e32
-color10 = #798431
-color11 = #e58a50
-color12 = #4b6b88
-color13 = #6e5079
-color14 = #4d7b74
-color15 = #5a626a
-colorBD = #b7bcba
+background = "#282c34"
+cursor = "#a3b3cc"
+foreground = "#dcdfe4"
+color0 = #282c34
+color1 = #e06c75
+color2 = #98c379
+color3 = #e5c07b
+color4 = #61afef
+color5 = #c678dd
+color6 = #56b6c2
+color7 = #dcdfe4
+color8 = #282c34
+color9 = #e06c75
+color10 = #98c379
+color11 = #e5c07b
+color12 = #61afef
+color13 = #c678dd
+color14 = #56b6c2
+color15 = #dcdfe4
+colorBD = #abb2bf
 colorIT =
 colorUL =
 

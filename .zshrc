@@ -1,30 +1,42 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/hugo/.oh-my-zsh
 
-ZSH_THEME="bullet-train"
-BULLETTRAIN_PROMPT_ORDER=(
-  context
-  dir
-  virtualenv
-  status
-  cmd_exec_time
-  git
-  )
-BULLETTRAIN_DIR_FG="black"
-BULLETTRAIN_DIR_BG="green"
-BULLETTRAIN_VIRTUALENV_BG="blue"
-BULLETTRAIN_VIRTUALENV_FG="black"
-BULLETTRAIN_EXEC_TIME_BG="red"
-BULLETTRAIN_GIT_BG="black"
-BULLETTRAIN_GIT_FG="white"
+ZSH_THEME="spaceship"
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  node          # Node.js section
+  golang        # Go section
+  php           # PHP section
+  docker        # Docker section
+  aws           # Amazon Web Services section
+  venv          # virtualenv section
+  pyenv         # Pyenv section
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
 
-plugins=(git sudo virtualenvwrapper)
+plugins=(git sudo virtualenvwrapper zsh-syntax-highlighting zsh-autosuggestions)
 
+export LC_ALL=en_US.UTF-8
 export GPGKEY=CE203A57
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
 export WORKON_HOME=~/Envs
-export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+alias external_screen="/home/hugo/.screenlayout/right.sh && /home/hugo/.config/polybar/launch.sh"
+alias external_screen_disable="/home/hugo/.screenlayout/alone.sh && /home/hugo/.config/polybar/launch.sh"
+alias gtop="LANG=en_US.utf8 TERM=xterm-256color gtop"
+
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
