@@ -8,14 +8,3 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-
-rofi.lines:                         6
-rofi.color-enabled:                 true
-rofi.separator-style:               solid
-rofi.width:                         34
-! rofi state:                        'bg'     'fg'   'bgalt' 'hlbg' 'hlfg'
-rofi.color-normal:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
-rofi.color-active:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
-rofi.color-urgent:                  #181818,#a1b56c,#181818,#a1b56c,#49393f
-rofi.color-window:                  #181818,#a1b56c,#181818
-!

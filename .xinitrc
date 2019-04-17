@@ -50,6 +50,9 @@ fi
 
 setxkbmap -layout fr
 xrandr --dpi 220
-feh --bg-scale ~/Pictures/wp-small.png
-
+wal -R
+/home/hugo/bin/screen.sh
+feh --bg-scale ~/Pictures/Wallpapers/wall1.jpg
+# xinput -list | grep -i key # Find keyboard device id
+setxkbmap -device 10 us
 exec i3

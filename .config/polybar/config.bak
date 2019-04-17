@@ -1,0 +1,197 @@
+[bar/top]
+width = 100%
+height = 35
+clickareas = 35
+tray-position = right
+tray-padding = 2
+tray-background = #E6181818
+background = #E6181818
+;foreground = #999999
+foreground = #f5f5f5
+foreground-alt = #555555
+dpi = 220
+monitor = ${env:MONITOR:}
+
+locale = en_US.UTF-8
+
+spacing = 4
+underline-size = 2
+padding-right = 5
+padding-left = 2
+module-margin-left = 5
+module-margin-right = 3
+
+font-0 = SFNS Display:style=Regular:size=7;0
+font-1 = MaterialIcons:size=7;0
+font-2 = Termsynu:size=7;-1
+font-3 = FontAwesome:size=7;0
+font-4 = DejaVuSans:size=7;1
+
+modules-left = wireless-network volume
+modules-center = i3
+modules-right = cpu memory battery date
+
+[module/battery]
+type = internal/battery
+full-at = 98
+time-format = %H:%M
+
+label-charging = %percentage%% (%time%)
+label-discharging = %percentage%% (%time%)
+
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
+format-full = <ramp-capacity><label-full>
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-framerate = 750
+
+[module/date]
+type = internal/date
+date =   %%{F#999}%a %e %b%%{F-} %%{F#fff}%H:%M%%{F-}
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+ping-interval = 10
+
+format-connected = <ramp-signal><label-connected>
+label-connected = %essid% (%signal%%)
+label-disconnected =    not connected
+label-disconnected-foreground = #66
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+
+animation-packetloss-0 = 
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = 
+animation-packetloss-1-foreground = ${bar/top.foreground}
+animation-packetloss-framerate = 500
+
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${bar/top.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${bar/top.foreground-alt}
+label-muted = Mute
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = │
+bar-volume-indicator-font = 2
+bar-volume-indicator-foreground = #ff
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${bar/top.foreground-alt}
+
+
+[module/volume1]
+type = internal/volume
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 9
+
+format-volume = <ramp-volume>  <label-volume>
+label-muted =   muted
+label-muted-foreground = #66
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+
+ws-icon-0 = 1; 
+ws-icon-1 = 2; 
+ws-icon-2 = 3; 
+ws-icon-3 = 4; 
+ws-icon-4 = 5; 
+ws-icon-5 = 6; 
+ws-icon-6 = 7; 
+ws-icon-7 = 8; 
+ws-icon-8 = 9; 
+ws-icon-9 = 0: 
+ws-icon-default = 
+
+label-focused = %icon%
+label-focused-foreground = #ffffff
+label-focused-background = #E63f3f3f
+label-focused-underline = #00FF65
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-visible = %icon%
+label-visible-underline = #555555
+label-visible-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 2
+
+[module/bitcoin]
+type = custom/script
+exec = ~/bin/bitcoin 
+format =   <label>
+tail = true
+interval = 5
+
+
+[module/updates]
+type = custom/script
+exec = ~/bin/arch-aur-updates
+format =    <label>
+tail = true
+interval = 90
+
+[module/cpu]
+type = internal/cpu
+format = <label>
+label =   %percentage%%
+
+[module/memory]
+type = internal/memory
+format = <label>
+label =   %percentage_used%%

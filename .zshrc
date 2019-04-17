@@ -32,11 +32,10 @@ export PATH=$PATH:~/go/bin
 export WORKON_HOME=~/Envs
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-alias external_screen="/home/hugo/.screenlayout/right.sh && /home/hugo/.config/polybar/launch.sh"
-alias external_screen_disable="/home/hugo/.screenlayout/alone.sh && /home/hugo/.config/polybar/launch.sh"
-alias gtop="LANG=en_US.utf8 TERM=xterm-256color gtop"
-
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.aliases.sh
+
+(cat ~/.cache/wal/sequences &)

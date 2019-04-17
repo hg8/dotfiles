@@ -1,47 +1,63 @@
 [global]
-    font = "San Francisco Display 12"
-    markup = yes
+    font = roboto 10
+    markup = full
     format = "<b>%s</b>\n%b"
     sort = yes
+    alignment = left
     indicate_hidden = yes
     alignment = center
     bounce_freq = 0
-    show_age_threshold = 60
+    show_age_threshold = 10
     word_wrap = yes
     ignore_newline = no
-    geometry = "450x5-30+60"
+    geometry = "515x20-40+80"
+    title = dunst
+    class = dunst
+    shrink = yes
     transparency = 0
-    idle_threshold = 90
-    monitor = 1
+    idle_threshold = 120
+    monitor = 0
     follow = mouse
+    stack_duplicates = true
+    hide_duplicate_count = false
     sticky_history = yes
-    line_height = 0
-    separator_height = 2
-    padding = 8
-    horizontal_padding = 8
-    separator_color = frame
-    startup_notification = false
-    dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
-    frame_width = 2
-    frame_color = "#A1B56C"
+    history_length = 50
+    show_indicators = no
+    line_height = 1
+    notification_height = 0
+    separator_height = 4
+    padding = 10
+    horizontal_padding = 25
+    separator_color = auto
+    browser = /usr/bin/firefox
+    icon_position = right
+    icon_path = /usr/share/icons/Papirus/32x32/status/:/usr/share/icons/Papirus/32x32/devices/
+    frame_width = 5
+    frame_color = "#f5f5f5"
+    corner_radius = 0
+
 
 [shortcuts]
     close = ctrl+space
-    close_all = ctrl+shift+space
-    context = ctrl+shift+period
+#   history = ctrl+i
 
 [urgency_low]
-    background = "#181818"
-    foreground = "#ffffff"
+    background = "#f5f5f5"
+    foreground = "#303030"
     timeout = 10
 
 [urgency_normal]
-    background = "#181818"
-    foreground = "#ffffff"
+    background = "#f5f5f5"
+    foreground = "#303030"
     timeout = 10
 
 [urgency_critical]
-    background = "#181818"
-    foreground = "#AB4642"
-    timeout = 0
+    background = "#f5f5f5"
+    foreground = "#303030"
+    frame_color = "#f5f5f5"
+    timeout = 60 
+
+[play_sound]
+    summary = "*"
+    script = "notif"
+
