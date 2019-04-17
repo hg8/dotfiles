@@ -9,7 +9,7 @@ alert = ${xrdb:color3:#222}
 
 [bar/top]
 width = 100%
-height = 48
+height = 42
 fixed-center = false
 dpi = 220
 monitor = ${env:MONITOR:}
@@ -33,10 +33,10 @@ module-margin-left = 1
 ;module-margin-right = 2
 ;module-margin = 0
 
-font-0 = inconsolata:bold:antialias=true:pixelsize=8;2
-font-1 = MaterialIcons:size=7;0
-font-2 = noto sans cjk jp:antialias=true:pixelsize=9;2
-font-3 = FontAwesome:size=7;0
+font-0 = inconsolata:bold:antialias=true:pixelsize=8;4
+font-1 = MaterialIcons:size=7;4
+font-2 = noto sans cjk jp:antialias=true:pixelsize=9;4
+font-3 = FontAwesome:size=7;4
 
 modules-left = i3
 modules-center = 
@@ -65,7 +65,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 label-connected = %essid% - %signal%%
-format-connected-background = ${xrdb:color1}
+;format-connected-background = ${xrdb:color1}
 format-connected-padding = 1
 
 
@@ -82,12 +82,12 @@ ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground}
 
 [module/date]
-format-background = ${xrdb:color4}
+;format-background = ${xrdb:color4}
 format-padding = 1
 type = internal/date
 interval = 5
 
-date = "%A %d/%m"
+date = "%a %d/%m"
 date-alt = "%a Week %V"
 
 time = %H:%M
@@ -101,7 +101,7 @@ label = %date%
 [module/time]
 type = internal/date
 interval = 5
-format-background = ${xrdb:color5}
+;format-background = ${xrdb:color5}
 format-padding = 1
 
 time = %H:%M
@@ -111,7 +111,7 @@ label = %time%
 
 [module/alsa]
 type = internal/alsa
-format-volume-background = ${xrdb:color2}
+;format-volume-background = ${xrdb:color2}
 format-volume-padding = 1
 
 format-volume = <ramp-volume> <label-volume>
@@ -132,8 +132,8 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging-background = ${xrdb:color3}
-format-discharging-background = ${xrdb:color3}
+;format-charging-background = ${xrdb:color3}
+;format-discharging-background = ${xrdb:color3}
 format-charging-padding = 1
 format-discharging-padding = 1
 
@@ -164,7 +164,7 @@ type = custom/menu
 
 expand-right = true
 
-format-background = ${xrdb:color6}
+;format-background = ${xrdb:color6}
 format-padding = 1
 format-spacing = 1
 

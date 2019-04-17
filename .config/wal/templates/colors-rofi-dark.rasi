@@ -1,13 +1,14 @@
 configuration {{
     lines: 10;
     columns: 1;
-    font: "sans 13";
+    font: "sans 28";
     bw: 0;
     location: 0;
     padding: 0;
     fixed-num-lines: true;
     show-icons: false;
     combi-modi: "window,run";
+    modi: "drun,window,run";
     separator-style: "none";
     hide-scrollbar: true;
     fullscreen: false;
@@ -39,6 +40,7 @@ configuration {{
     me-select-entry: "";
     me-accept-entry: "MousePrimary";
     me-accept-custom: "MouseMiddle";
+    show-icons: true;
 }}
 
 * {{

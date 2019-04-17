@@ -23,6 +23,7 @@ call vundle#begin()
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'pangloss/vim-javascript'
     Plugin 'joshdick/onedark.vim'
+    Plugin 'Townk/vim-autoclose'
 
 
     "-------------------=== Snippets support ===--------------------

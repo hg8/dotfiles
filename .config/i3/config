@@ -208,9 +208,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -font "System San Francisco Display 28"
+bindsym $mod+d exec rofi -show drun -font "System San Francisco Display 28"
 
-bindsym XF86Search exec rofi -show run -font "System San Francisco Display 28"
+bindsym XF86Search exec rofi -show drun -font "System San Francisco Display 28"
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -251,5 +251,5 @@ mode "$mode_system" {
     }
 bindsym $mod+Escape mode "$mode_system"
 
-# smart_gaps on
-gaps inner 10
+smart_gaps on
+gaps inner 5
