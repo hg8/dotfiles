@@ -46,7 +46,8 @@ font-2 = "Iosevka Nerd Font:pixelsize=9;4"
 
 modules-left = i3
 modules-center = 
-modules-right = alsa battery wlan time powermenu
+modules-right = wlan battery alsa time 
+
 
 tray-position = right
 tray-padding = 2
@@ -85,7 +86,7 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 
-ramp-signal-foreground = ${colors.cyan}
+ramp-signal-foreground = ${colors.blue}
 
 [module/date]
 ;format-background = ${xrdb:color4}
@@ -133,7 +134,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-2-foreground = ${colors.red}
-ramp-volume-foreground = ${colors.foreground}
+ramp-volume-foreground = ${colors.yellow}
 
 [module/battery]
 type = internal/battery

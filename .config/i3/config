@@ -216,19 +216,24 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Multimedia Keys
 # increase volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/bin/volume.sh up
 # decrease volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/bin/volume.sh down
 # mute volume
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master mute
+# bindsym XF86AudioMute exec --no-startup-id amixer -q set Master mute
+bindsym XF86AudioMute exec --no-startup-id ~/bin/volume.sh mute
 # pause / play / next / previous
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id  light -A 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec --no-startup-id  light -A 10 # increase screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/bin/brightness.sh up 
+# bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10 # decrease screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/bin/brightness.sh down
 
 exec --no-startup-id xautolock -time 10 -locker $Locker &
 exec --no-startup-id xss-lock -- $Locker &
