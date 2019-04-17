@@ -38,9 +38,9 @@ font-1 = MaterialIcons:size=7;4
 font-2 = noto sans cjk jp:antialias=true:pixelsize=9;4
 font-3 = FontAwesome:size=7;4
 
-modules-left = i3
+modules-left = i3 xwindow
 modules-center = 
-modules-right = wlan alsa battery date time powermenu
+modules-right = alsa battery wlan date time powermenu
 
 tray-position = right
 tray-padding = 2
@@ -64,7 +64,7 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid% - %signal%%
+label-connected = %essid% (%signal%%)
 ;format-connected-background = ${xrdb:color1}
 format-connected-padding = 1
 
