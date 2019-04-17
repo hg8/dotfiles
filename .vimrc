@@ -22,8 +22,8 @@ call vundle#begin()
     Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'pangloss/vim-javascript'
-    Plugin 'joshdick/onedark.vim'
     Plugin 'Townk/vim-autoclose'
+    Plugin 'chriskempson/base16-vim'
 
 
     "-------------------=== Snippets support ===--------------------
@@ -60,7 +60,7 @@ syntax enable                               " syntax highlight
 
 set t_Co=256                                " set 256 colors
 set background=dark
-colorscheme onedark
+colorscheme base16-ocean
 
 
 set number                                  " show line numbers
@@ -111,7 +111,7 @@ set hlsearch	                            " highlight search results
 "=====================================================
 "" AirLine settings
 "=====================================================
-let g:airline_theme='onedark'
+let g:airline_theme='base16'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
