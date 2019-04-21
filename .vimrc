@@ -23,7 +23,8 @@ call vundle#begin()
     Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'pangloss/vim-javascript'
     Plugin 'Townk/vim-autoclose'
-    Plugin 'chriskempson/base16-vim'
+    Plugin 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+    Plugin 'Yggdroot/indentLine'
 
 
     "-------------------=== Snippets support ===--------------------
@@ -38,7 +39,7 @@ call vundle#begin()
     Plugin 'sheerun/vim-polyglot'
 
     "-------------------=== Python  ===-----------------------------
-    Plugin 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+    Plugin 'python-mode/python-mode'                   " Python mode (docs, refactor, lints...)
     Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
 
     "-------------------=== Markdown ===---------------------------
