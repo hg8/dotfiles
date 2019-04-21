@@ -1,5 +1,5 @@
 [global]
-    font = roboto 10
+    font = San Francisco Display 10
     markup = full
     format = "<b>%s</b>\n%b"
     sort = yes

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+notify-send -u critical 'Locking now...'
+
+sleep "${1:-3}"
+
+i3lock -i ~/Pictures/Wallpapers/wall.png

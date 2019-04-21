@@ -44,9 +44,9 @@ font-0 = inconsolata:bold:antialias=true:pixelsize=8;4
 font-1 = noto sans cjk jp:antialias=true:pixelsize=9;4
 font-2 = "Iosevka Nerd Font:pixelsize=9;4"
 
-modules-left = i3
+modules-left = bspwm
 modules-center = 
-modules-right = wlan battery alsa time 
+modules-right = wlan battery alsa time
 
 
 tray-position = right
@@ -54,8 +54,9 @@ tray-padding = 2
 tray-background = ${colors.background}
 
 ;wm-restack = i3
+wm-restack = bspwm
 
-;override-redirect = true
+override-redirect = false
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -180,7 +181,6 @@ type = custom/menu
 
 expand-right = true
 
-;format-background = ${xrdb:color6}
 format-padding = 1
 format-spacing = 1
 
@@ -249,3 +249,18 @@ label-urgent-foreground = #000000
 label-urgent-background = #bd2c40
 label-urgent-padding = 1
 
+[module/bspwm]
+type = internal/bspwm
+label-focused = %name%
+label-focused-foreground= ${colors.red}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-foreground = ${colors.foreground}
+label-occupied-padding = 1
+
+label-urgent = %name%
+label-urgent-background = ${colors.red} 
+label-urgent-padding = 1
+
+label-empty = 

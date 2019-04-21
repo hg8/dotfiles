@@ -48,11 +48,19 @@ fi
 # unset f
 #fi
 
+systemctl --user import-environment DISPLAY
+xsetroot -cursor_name left_ptr &
 setxkbmap -layout fr
 xrandr --dpi 220
 wal -R
 /home/hugo/bin/screen.sh
-feh --bg-scale ~/Pictures/Wallpapers/wall2.jpg
+feh --bg-scale ~/Pictures/Wallpapers/wall.png
 # xinput -list | grep -i key # Find keyboard device id
 setxkbmap -device 10 us
-exec i3
+# exec i3
+sxhkd &
+compton -f 
+xss-lock -- i3lock -i ~/Pictures/Wallpapers/wall.png &
+xautolock -detectsleep -locker "i3lock -e -i ~/Pictures/Wallpapers/wall.png" -notify 10 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 10 seconds'" &
+exec bspwm
+export _JAVA_AWT_WM_NONREPARENTING=1
