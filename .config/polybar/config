@@ -40,9 +40,8 @@ module-margin-left = 1
 ;module-margin-right = 2
 ;module-margin = 0
 
-font-0 = inconsolata:bold:antialias=true:pixelsize=8;4
-font-1 = noto sans cjk jp:antialias=true:pixelsize=9;4
-font-2 = "Iosevka Nerd Font:pixelsize=9;4"
+font-0 = Iosevka:antialias=true:pixelsize=8;4
+font-1 = noto sans cjk jp:antialias=true:pixelsize=8;4
 
 modules-left = bspwm
 modules-center = 

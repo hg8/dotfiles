@@ -7,7 +7,7 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Source Code Pro 9 
+font = Iosevka 9 
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -56,7 +56,8 @@ colorIT =
 colorUL =
 
 [hints]
-font = Source Code Pro 9
+# font = Source Code Pro 9
+font = Ioveska 9
 #foreground = #dcdccc
 #background = #3f3f3f
 #active_foreground = #e68080
