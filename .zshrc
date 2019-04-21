@@ -23,6 +23,9 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
+SPACESHIP_CHAR_SYMBOL="> " 
+SPACESHIP_PROMPT_BOLD=false
+
 plugins=(git sudo virtualenvwrapper zsh-syntax-highlighting zsh-autosuggestions)
 
 export LC_ALL=en_US.UTF-8

@@ -8,7 +8,7 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-URxvt.font: xft:Source Code Pro for Powerline:pixelsize=28,xft:DejaVu Sans:pixelsize=28
+URxvt.font: xft:Iosevka:pixelsize=28,xft:DejaVu Sans:pixelsize=28
 URxvt.letterSpace: 1
 URxvt.internalBorder: 24
 URxvt.cursorBlink: true
