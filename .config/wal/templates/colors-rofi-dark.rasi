@@ -1,7 +1,7 @@
 configuration {{
     lines: 10;
     columns: 1;
-    font: "sans 28";
+    font: "Iosevka 28";
     bw: 0;
     location: 0;
     padding: 0;
@@ -76,7 +76,7 @@ configuration {{
     background-color: @background;
     border: 1;
     border-color: @foreground;
-    border-radius: 12px;
+    border-radius: 0px;
     padding: 40;
     width: 30%;
     height: 40%;
