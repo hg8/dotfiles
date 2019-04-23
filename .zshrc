@@ -42,3 +42,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.aliases.sh
 
 (cat ~/.cache/wal/sequences &)
+todo

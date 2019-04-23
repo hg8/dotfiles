@@ -7,7 +7,7 @@ super + Return
 	termite
 
 super + d
-    rofi -show drun -font "System San Francisco Display 28"
+    rofi -show run 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -115,13 +115,13 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 XF86AudioRaiseVolume
-    ~/bin/volume.sh up
+    ~/bin/volume up
 
 XF86AudioLowerVolume
-     ~/bin/volume.sh down
+     ~/bin/volume down
 
 XF86AudioMute
-    ~/bin/volume.sh mute
+    ~/bin/volume mute
 
 XF86AudioPlay
     playerctl play-pause
@@ -133,10 +133,10 @@ XF86AudioPrev
     playerctl previous
 
 XF86MonBrightnessUp
-    ~/bin/brightness.sh up
+    ~/bin/brightness up
 
 XF86MonBrightnessDown
-    ~/bin/brightness.sh down
+    ~/bin/brightness down
 
 alt + shift + l
     ~/bin/power/lock
