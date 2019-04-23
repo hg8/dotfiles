@@ -13,25 +13,16 @@ call vundle#begin()
     "-------------------=== Code/Project navigation ===-------------
     Plugin 'scrooloose/nerdtree'                " Project and file navigation
     Plugin 'majutsushi/tagbar'                  " Class/module browser
-    Plugin 'kien/ctrlp.vim'                     " Fast transitions on project files
     Plugin 'mbbill/undotree'			" Undo tree 
 
     "-------------------=== Other ===-------------------------------
     Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
     Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
     Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
-    Plugin 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
     Plugin 'pangloss/vim-javascript'
     Plugin 'Townk/vim-autoclose'
     Plugin 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
     Plugin 'Yggdroot/indentLine'
-
-
-    "-------------------=== Snippets support ===--------------------
-    Plugin 'garbas/vim-snipmate'                " Snippets manager
-    Plugin 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
-    Plugin 'tomtom/tlib_vim'                    " dependencies #2
-    Plugin 'honza/vim-snippets'                 " snippets repo
 
     "-------------------=== Languages support ===-------------------
     Plugin 'tpope/vim-commentary'               " Comment stuff out
@@ -46,9 +37,6 @@ call vundle#begin()
     Plugin 'godlygeek/tabular'
     Plugin 'plasticboy/vim-markdown'
 
-    "------------------=== Golang ===------------------------------
-    Plugin 'fatih/vim-go'
-
 call vundle#end()                           " required
 filetype on
 filetype plugin on
@@ -62,7 +50,6 @@ syntax enable                               " syntax highlight
 set t_Co=256                                " set 256 colors
 set background=dark
 colorscheme base16-ocean
-
 
 set number                                  " show line numbers
 set ruler
@@ -85,9 +72,8 @@ set backspace=indent,eol,start              " backspace removes all (indents, EO
 
 set scrolloff=10                            " let 10 lines before/after cursor during scroll
 
-set clipboard=unnamed                       " use system clipboard
+set clipboard=unnamedplus                       " use system clipboard
 
-set exrc                                    " enable usage of additional .vimrc files from working directory
 set secure                                  " prohibit .vimrc files to execute shell, create files, etc...
 
 set ignorecase                              " ignore case when searching
@@ -96,7 +82,6 @@ set smartcase
 "=====================================================
 "" Tabs / Buffers settings
 "=====================================================
-" @TODO
 tab sball
 set switchbuf=useopen
 set laststatus=2
@@ -135,19 +120,9 @@ nmap <F2> :NERDTreeToggle <CR>
 let NERDTreeQuitOnOpen=1
 
 "=====================================================
-"" SnipMate settings
-"=====================================================
-let g:snippets_dir='~/.vim/vim-snippets/snippets'
-
-"=====================================================
 "" Undotree settings
 "=====================================================
 nnoremap <F5> :UndotreeToggle<cr>
-
-"=====================================================
-"" Riv.vim settings
-"=====================================================
-let g:riv_disable_folding=1
 
 "=====================================================
 "" Python settings
@@ -268,17 +243,6 @@ set splitright
 " Quit insert mode with jj
 inoremap jj <Esc>
 
-" Go
-set autowrite
-
-let g:syntastic_python_flake8_args='--ignore=E501'
-let g:ale_python_flake8_args="--ignore=E501"
-
-set cursorline
-set clipboard+=unnamedplus
-set guicursor=
-let g:pymode_python = 'python3'
-
 if (empty($TMUX))
   if (has("nvim"))
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -286,4 +250,4 @@ if (empty($TMUX))
   if (has("termguicolors"))
     set termguicolors
   endif
-endif
+endif 
