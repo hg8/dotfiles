@@ -9,9 +9,9 @@
 
 To install simply clone the repo and symlink the specific config you need
 
-```
-git clone git@github.com:hg8/dotfiles.git
-ln -s /home/hugo/dotfiles/.config/bspwm/ /home/hugo/.config/
+```sh
+$ git clone git@github.com:hg8/dotfiles.git
+$ ln -s $HOME/dotfiles/.config/bspwm/ $HOME/.config/
 ```
 
 
@@ -42,6 +42,7 @@ ln -s /home/hugo/dotfiles/.config/bspwm/ /home/hugo/.config/
   * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
   * [rofi](https://github.com/davatorium/rofi) - window switcher, application launcher and dmenu replacement
   * [dunst](https://github.com/dunst-project/dunst) - lightweight and customizable notification daemon
+  * [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) - Clean and simple lockscreen
   * [compton](https://github.com/chjj/compton) - compositor for X11
   * [Papirus-icon](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - free and open source SVG icon theme for Linux, based on the Paper icon theme
   * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
