@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo 'I am here!'
+sleep 120
+ARCH_COUNT=$(checkupdates|wc -l)
+
+if [[ $ARCH_COUNT -ge 1 ]]; then
+    ARCH=$(checkupdates | awk '{print $1;}')
+	notify-send -t 1000000 -u normal "New Arch Linux Updates" "$ARCH"
+fi
