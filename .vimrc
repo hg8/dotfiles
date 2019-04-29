@@ -132,7 +132,7 @@ nnoremap <F5> :UndotreeToggle<cr>
 let g:pymode_python='python'
 let g:syntastic_python_python_exec='python'
 
-" let g:pymode_lint_ignore="E501"
+let g:pymode_lint_ignore=["E501"]
 
 " rope
 let g:pymode_rope=0
