@@ -26,6 +26,5 @@ bspc rule -a telegram-desktop desktop='^8'
 bspc rule -a Lxappearance state=floating
 bspc rule -a Thunar state=floating
 bspc rule -a Seahorse state=floating
-bspc rule -a telegram-desk state=floating
 
 $HOME/.config/polybar/launch.sh

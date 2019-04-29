@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-notify-send -u critical 'Locking now...'
+notify-send -u -t 2500 critical 'Locking now...'
 
 sleep "${1:-3}"
 
