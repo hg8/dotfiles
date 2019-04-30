@@ -40,6 +40,7 @@ PATH="$NPM_PACKAGES/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.sh
+source ~/.aliases.priv.sh
 
 (cat ~/.cache/wal/sequences &)
 todo
