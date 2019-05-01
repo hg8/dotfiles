@@ -45,5 +45,6 @@ compton -f
 xss-lock -- betterlockscreen -l &
 xautolock -detectsleep -locker "betterlockscreen -l" -notify 10 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 10 seconds'" &
 $HOME/bin/update-notification &
+autocutsel -selection PRIMARY -fork
 # exec i3
 exec bspwm

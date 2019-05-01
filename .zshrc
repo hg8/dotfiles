@@ -10,7 +10,6 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   node          # Node.js section
   golang        # Go section
-  php           # PHP section
   docker        # Docker section
   aws           # Amazon Web Services section
   venv          # virtualenv section

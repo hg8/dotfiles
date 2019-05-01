@@ -1,52 +1,32 @@
-    " Be iMproved
 set nocompatible
 
-"=====================================================
-"" Vundle settings
-"=====================================================
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-    Plugin 'VundleVim/Vundle.vim'               " let Vundle manage Vundle, required
-
+call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
-    Plugin 'scrooloose/nerdtree'                " Project and file navigation
-    Plugin 'majutsushi/tagbar'                  " Class/module browser
-    Plugin 'mbbill/undotree'			" Undo tree 
+    Plug 'scrooloose/nerdtree'  " Project and file navigation
+    Plug 'majutsushi/tagbar'    " Class/module browser
+    Plug 'mbbill/undotree'		" Undo tree 
 
     "-------------------=== Other ===-------------------------------
-    Plugin 'bling/vim-airline'                  " Lean & mean status/tabline for vim
-    Plugin 'vim-airline/vim-airline-themes'     " Themes for airline
-    Plugin 'Lokaltog/powerline'                 " Powerline fonts plugin
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'Townk/vim-autoclose'
-    Plugin 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
-    Plugin 'Yggdroot/indentLine'
+    Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
+    Plug 'vim-airline/vim-airline-themes'     " Themes for airline
+    Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
+    Plug 'pangloss/vim-javascript'
+    Plug 'Townk/vim-autoclose'
+    Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+    Plug 'Yggdroot/indentLine'
 
     "-------------------=== Languages support ===-------------------
-    Plugin 'tpope/vim-commentary'               " Comment stuff out
-    Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
-    Plugin 'sheerun/vim-polyglot'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    Plug 'sheerun/vim-polyglot'
+    Plug 'scrooloose/syntastic'     " Syntax checking plugin for Vim
 
     "-------------------=== Python  ===-----------------------------
-    Plugin 'python-mode/python-mode'                   " Python mode (docs, refactor, lints...)
-    Plugin 'scrooloose/syntastic'               " Syntax checking plugin for Vim
-
-    "-------------------=== Markdown ===---------------------------
-    Plugin 'godlygeek/tabular'
-    Plugin 'plasticboy/vim-markdown'
-
-call vundle#end()                           " required
-filetype on
-filetype plugin on
-filetype plugin indent on
+    Plug 'python-mode/python-mode'  " Python mode (docs, refactor, lints...)
+call plug#end()                           " required
 
 "=====================================================
 "" General settings
 "=====================================================
-syntax enable                               " syntax highlight
-
 set t_Co=256                                " set 256 colors
 set background=dark
 colorscheme base16-ocean
@@ -177,15 +157,6 @@ let g:pymode_syntax_builtin_types=g:pymode_syntax_all
 let g:pymode_syntax_highlight_exceptions=g:pymode_syntax_all
 let g:pymode_syntax_docstrings=g:pymode_syntax_all
 
-" highlight 'long' lines (>= 80 symbols) in python files
-augroup vimrc_autocmds
-    autocmd!
-    autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
-    autocmd FileType python,rst,c,cpp set nowrap
-    autocmd FileType python,rst,c,cpp set colorcolumn=80
-augroup END
-
 " code folding
 let g:pymode_folding=0
 
@@ -243,11 +214,5 @@ set splitright
 " Quit insert mode with jj
 inoremap jj <Esc>
 
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif 
+" fix base16-vim green line
+set termguicolors
