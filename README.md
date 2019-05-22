@@ -52,3 +52,9 @@ $ ln -s $HOME/dotfiles/.config/bspwm/ $HOME/.config/
 
 * [@aesophor](https://github.com/aesophor/): For the big inspiration and great work.
 * [@wacoh_](https://twitter.com/wacoh_) for the wallpaper.
+
+
+<br>
+<div align="center">
+<img src="https://github.com/hg8/dotfiles/raw/master/screenshot/2019-05-22-062214_3000x2000_scrot.png">
+</div>
