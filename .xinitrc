@@ -32,19 +32,18 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 systemctl --user import-environment DISPLAY
-xsetroot -cursor_name left_ptr &
-setxkbmap -layout fr
+xsetroot -cursor_name left_ptr
 xrandr --dpi 220
 wal -R
-$HOME/bin/screen.sh
-feh --bg-scale ~/Pictures/Wallpapers/wall.png
+feh --bg-scale ~/Pictures/Wallpapers/huawei_matebook_x_pro_wall_technastic_05.jpg
 # xinput -list | grep -i key # Find keyboard device id
-setxkbmap -device 10 us
+# setxkbmap -device 10 us
 sxhkd &
-compton -f 
+compton -f &
 xss-lock -- betterlockscreen -l &
 xautolock -detectsleep -locker "betterlockscreen -l" -notify 10 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 10 seconds'" &
 $HOME/bin/update-notification &
-autocutsel -selection PRIMARY -fork
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 # exec i3
 exec bspwm

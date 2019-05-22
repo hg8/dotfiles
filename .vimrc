@@ -12,7 +12,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
     Plug 'pangloss/vim-javascript'
     Plug 'Townk/vim-autoclose'
-    Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+    " Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
+    Plug 'danielwe/base16-vim' " use unofficial fork until major issue is fixed
     Plug 'Yggdroot/indentLine'
 
     "-------------------=== Languages support ===-------------------

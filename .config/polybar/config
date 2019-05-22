@@ -40,12 +40,12 @@ module-margin-left = 1
 ;module-margin-right = 2
 ;module-margin = 0
 
-font-0 = Iosevka:antialias=true:pixelsize=8;4
+font-0 = Iosevka:antialias=true:pixelsize=9;4
 font-1 = noto sans cjk jp:antialias=true:pixelsize=8;4
 
 modules-left = bspwm
 modules-center = 
-modules-right = wlan battery alsa time
+modules-right = wlan battery pulseaudio time
 
 
 tray-position = right
@@ -67,7 +67,7 @@ type = internal/xwindow
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp0s20f3
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -118,10 +118,12 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %time%
 
-[module/alsa]
-type = internal/alsa
-;format-volume-background = ${xrdb:color2}
-format-volume-padding = 1
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
 
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
@@ -144,9 +146,11 @@ full-at = 98
 
 format-charging-padding = 1
 format-discharging-padding = 1
+time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
 
 ramp-capacity-foreground = ${colors.green}
 
