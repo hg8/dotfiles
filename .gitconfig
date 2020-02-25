@@ -1,21 +1,3 @@
 [user]
-	email = hforestier@protonmail.com 
+	email = hforestier@protonmail.com
 	name = Hugo F.
-
-[color]
-	ui = auto
-
-[core]
-	editor = vim
-
-[alias]
-    st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-
-[status]
-	showUntrackedFiles = all
-[push]
-	default = upstream

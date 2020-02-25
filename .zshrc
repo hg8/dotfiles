@@ -1,5 +1,4 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/hugo/.oh-my-zsh
+export ZSH="/Users/hugo/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 SPACESHIP_PROMPT_ORDER=(
@@ -8,8 +7,8 @@ SPACESHIP_PROMPT_ORDER=(
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
-  node          # Node.js section
   golang        # Go section
+  # kubecontext
   docker        # Docker section
   aws           # Amazon Web Services section
   venv          # virtualenv section
@@ -22,24 +21,18 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-SPACESHIP_CHAR_SYMBOL="> " 
+SPACESHIP_CHAR_SYMBOL="$ " 
 SPACESHIP_PROMPT_BOLD=false
 
 plugins=(git sudo virtualenvwrapper zsh-syntax-highlighting zsh-autosuggestions)
 
-export LC_ALL=en_US.UTF-8
-export GPGKEY=CE203A57
-export GOPATH=~/go
-export PATH=$PATH:~/go/bin
-export WORKON_HOME=~/Envs
-export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
-
+source $HOME/.variables.sh
+source $HOME/.fzf.sh
 source $ZSH/oh-my-zsh.sh
-source ~/.aliases.sh
-source ~/.aliases.priv.sh
+source $HOME/.aliases.sh
 
-(cat ~/.cache/wal/sequences &)
-todo
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/hugo/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hugo/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/hugo/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hugo/google-cloud-sdk/completion.zsh.inc'; fi
