@@ -1,8 +1,5 @@
 <div align="center">
 <h3>.dotfiles</h3>
-<img src="https://github.com/hg8/dotfiles/raw/master/screenshot/2019-04-17-163339_3200x1800_scrot.png">
-
-`Arch` `bspwm` `Polybar` `base16-ocean`
 </div>
 
 ## Installation
@@ -37,24 +34,3 @@ $ ln -s $HOME/dotfiles/.config/bspwm/ $HOME/.config/
     * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - git diff made human-readable!
   * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
 
-* GUI
-  * [bspwm](https://github.com/baskerville/bspwm) -  A tiling window manager based on binary space partitioning 
-  * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
-  * [rofi](https://github.com/davatorium/rofi) - window switcher, application launcher and dmenu replacement
-  * [dunst](https://github.com/dunst-project/dunst) - lightweight and customizable notification daemon
-  * [betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) - Clean and simple lockscreen
-  * [compton](https://github.com/chjj/compton) - compositor for X11
-  * [Papirus-icon](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - free and open source SVG icon theme for Linux, based on the Paper icon theme
-  * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
-  * [arc-theme](https://github.com/horst3180/arc-theme) - flat theme with transparent elements for GTK 3, GTK 2
-
-## Credits
-
-* [@aesophor](https://github.com/aesophor/): For the big inspiration and great work.
-* [@wacoh_](https://twitter.com/wacoh_) for the wallpaper.
-
-
-<br>
-<div align="center">
-<img src="https://github.com/hg8/dotfiles/raw/master/screenshot/2019-05-22-062214_3000x2000_scrot.png">
-</div>
