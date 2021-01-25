@@ -1,4 +1,4 @@
-alias archpen="ssh -D 8888 hugo@127.0.0.1 -p 2222"
+alias archpen="~/bin/vbox.sh"
 alias vim="nvim"
 alias ls="exa --icons"
 alias lt='ls --tree'
