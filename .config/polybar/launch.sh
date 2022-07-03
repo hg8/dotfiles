@@ -1,13 +1,11 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 # Terminate already running bar instances
 killall -q polybar
+# If all your bars have ipc enabled, you can also use 
+# polybar-msg cmd quit
 
-# Wait until the processes have been shut down
-while pgrep -x polybar >/dev/null; do sleep 1; done
+# Launch Polybar, using default config location ~/.config/polybar/config
+polybar default 2>&1 | tee -a /tmp/polybar.log & disown
 
-for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-  MONITOR=$m polybar --reload top &
-done
-
-echo "Bars launched..."
+echo "Polybar launched..."

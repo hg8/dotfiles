@@ -1,45 +1,19 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/hugo/.oh-my-zsh
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ORDER=(
-  time          # Time stampts section
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  node          # Node.js section
-  golang        # Go section
-  docker        # Docker section
-  aws           # Amazon Web Services section
-  venv          # virtualenv section
-  pyenv         # Pyenv section
-  exec_time     # Execution time
-  line_sep      # Line break
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
+export WORKON_HOME=~/.virtualenvs
 
-SPACESHIP_CHAR_SYMBOL="> " 
-SPACESHIP_PROMPT_BOLD=false
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-plugins=(git sudo virtualenvwrapper zsh-syntax-highlighting zsh-autosuggestions)
+export ZSH="/home/hugo/.oh-my-zsh"
 
-export LC_ALL=en_US.UTF-8
-export GPGKEY=CE203A57
-export GOPATH=~/go
-export PATH=$PATH:~/go/bin
-export WORKON_HOME=~/Envs
-export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+plugins=(git sudo pass zsh-autosuggestions zsh-syntax-highlighting virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases.sh
-source ~/.aliases.priv.sh
 
-(cat ~/.cache/wal/sequences &)
-todo
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

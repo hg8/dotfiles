@@ -35,19 +35,22 @@ function send_notification {
 case $1 in
   up)
     # set the volume on (if it was muted)
-    amixer -q set Master on > /dev/null
+    # amixer -q set Master on > /dev/null
     # up the volume (+ 5%)
-    amixer -q  sset Master 5%+ > /dev/null
+    #amixer -q  sset Master 5%+ > /dev/null
+    pamixer -i 5 
     send_notification
     ;;
   down)
-    amixer -q set Master on > /dev/null
-    amixer -q sset Master 5%- > /dev/null
+    #amixer -q set Master on > /dev/null
+    #amixer -q sset Master 5%- > /dev/null
+    pamixer -d 5
     send_notification
     ;;
   mute)
     # toggle mute
-    amixer -q set Master 1+ toggle > /dev/null
+    # amixer -q set Master 1+ toggle > /dev/null
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
     send_notification
     ;;
 esac

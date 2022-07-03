@@ -1,6 +1,7 @@
-Xcursor.theme:Breeze-Obsidian 
+Xcursor.theme:Capitaine Cursors
 Xcursor.size: 48
-Xft.dpi: 220
+*.dpi: 192
+Xft.dpi: 192
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
@@ -8,12 +9,62 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-URxvt.font: xft:Iosevka:pixelsize=28,xft:DejaVu Sans:pixelsize=28
-URxvt.letterSpace: 1
-URxvt.internalBorder: 24
-URxvt.cursorBlink: true
-URxvt.cursorUnderline: false
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.urgentOnBell: true
-URxvt.depth: 24
+#define BACKGROUND #292d3e
+#define FOREGROUND #d0d0d0
+#define BLACK #292d3e
+#define DARK_GREY #434758
+#define LITE_GREY #959dcb
+#define WHITE #FFFFFF
+#define LITE_RED #ff8b92
+#define DARK_RED #f07178
+#define LITE_GREEN #ddffa7
+#define DARK_GREEN #c3e88d
+#define LITE_YELLOW #ffe585
+#define DARK_YELLOW #ffcb6b
+#define LITE_BLUE #9cc4ff
+#define DARK_BLUE #82aaff
+#define LITE_MAGENTA #e1acff
+#define DARK_MAGENTA #c792ea
+#define LITE_CYAN #a3f7ff
+#define DARK_CYAN #89ddff
+
+
+! special
+*.background: BACKGROUND
+*.foreground: FOREGROUND
+*.cursorColor: FOREGROUND
+*.bar_background: BACKGROUND
+*.border: BACKGROUND
+
+! black
+*.color0: BLACK
+*.color8: DARK_GREY
+
+! red
+*.color1: DARK_RED
+*.color9: LITE_RED
+
+! green
+*.color2: DARK_GREEN
+*.color10: LITE_GREEN
+
+! yellow
+*.color3: DARK_YELLOW
+*.color11: LITE_YELLOW
+
+! blue
+*.color4: DARK_BLUE
+*.color12: LITE_BLUE
+
+! magenta
+*.color5: DARK_MAGENTA
+*.color13: LITE_MAGENTA
+
+! cyan
+*.color6: DARK_CYAN
+*.color14: LITE_CYAN
+
+! white
+*.color7: LITE_GREY
+*.color15: WHITE
+

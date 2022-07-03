@@ -2,7 +2,7 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
     "-------------------=== Code/Project navigation ===-------------
-    Plug 'scrooloose/nerdtree'  " Project and file navigation
+    Plug 'preservim/nerdtree'  " Project and file navigation
     Plug 'majutsushi/tagbar'    " Class/module browser
     Plug 'mbbill/undotree'		" Undo tree 
 
@@ -11,10 +11,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'     " Themes for airline
     Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
     Plug 'pangloss/vim-javascript'
-    Plug 'Townk/vim-autoclose'
     " Plug 'chriskempson/base16-vim', {'do': 'git checkout dict_fix'}
     Plug 'danielwe/base16-vim' " use unofficial fork until major issue is fixed
     Plug 'Yggdroot/indentLine'
+    Plug 'ryanoasis/vim-devicons'
 
     "-------------------=== Languages support ===-------------------
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -30,7 +30,7 @@ call plug#end()                           " required
 "=====================================================
 set t_Co=256                                " set 256 colors
 set background=dark
-colorscheme base16-ocean
+colorscheme base16-tomorrow-night
 
 set number                                  " show line numbers
 set ruler
@@ -98,7 +98,8 @@ nmap <F8> :Tagbar<CR>
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '__pycache__$']     " Ignore files in NERDTree
 autocmd VimEnter * if !argc() | NERDTree | endif  " Load NERDTree only if vim is run without arguments
 nmap <F2> :NERDTreeToggle <CR>
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
+map <C-n> :NERDTreeToggle<CR>
 
 "=====================================================
 "" Undotree settings
@@ -110,9 +111,6 @@ nnoremap <F5> :UndotreeToggle<cr>
 "=====================================================
 
 " python executables for different plugins
-let g:pymode_python='python'
-let g:syntastic_python_python_exec='python'
-
 let g:pymode_lint_ignore=["E501"]
 
 " rope
