@@ -5,7 +5,7 @@ fi
 export WORKON_HOME=~/.virtualenvs
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.cargo/bin
 
 export ZSH="/home/hugo/.oh-my-zsh"
 
