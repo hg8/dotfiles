@@ -1,0 +1,139 @@
+/* -----------------------------------------------------------------------------
+ * Styles
+  * -------------------------------------------------------------------------- */
+
+/* COLORS */
+
+/* Nord */
+@define-color bg #2E3440;
+
+@define-color warning #ebcb8b;
+@define-color critical #BF616A;
+@define-color workspacesfocused #4C566A;
+@define-color tray @workspacesfocused;
+@define-color nord_bg #434C5E;
+@define-color nord_light #D8DEE9;
+@define-color nord_dark_font #434C5E;
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 3px;
+    min-height: 0;
+    margin: 0.15em 0.2em;
+}
+
+
+/* The whole bar */
+#waybar {
+    background: @bg;
+    color: @nord_light;
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+
+/* Each module */
+#clock,
+#mode,
+#custom-pacman,
+#pulseaudio,
+#battery,
+#backlight {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+}
+
+
+/* Each critical module */
+#memory.critical,
+#cpu.critical,
+#temperature.critical,
+#battery.critical {
+    color: @critical;
+}
+
+/* Each warning */
+#memory.warning,
+#cpu.warning,
+#temperature.warning,
+#battery.warning {
+    background: @warning;
+    color: @nord_dark_font;
+}
+
+/* And now modules themselves in their respective order */
+
+#mode { /* Shown current Sway mode (resize etc.) */
+    color: @nord_light;
+    background: @nord_bg;
+}
+
+/* Workspaces stuff */
+#workspaces button {
+    font-weight: bold; /* Somewhy the bar-wide setting is ignored*/
+    padding: 0;
+   /*color: #999;*/
+    color: #D8DEE9;
+    opacity: 0.3;
+    background: none;
+    font-size: 1em;
+}
+
+#workspaces button.focused {
+    background: @workspacesfocused;
+    color: #D8DEE9;
+    opacity: 1;
+    padding: 0 0.4em;
+}
+
+#workspaces button.urgent {
+    border-color: #c9545d;
+    color: #c9545d;
+    opacity: 1;
+}
+
+#window {
+    margin-right: 40px;
+    margin-left: 40px;
+    font-weight: normal;
+}
+
+/* right module default */
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#backlight,
+#clock,
+#tray,
+#custom-pacman {
+    color: @nord_light;
+    background: @nord_bg;
+}
+
+#idle_inhibitor {
+    background: @bg;
+    padding: 0 0;
+}
+
+#cpu {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    margin-right: 0;
+    border-radius: 0;
+
+}
+#memory {
+    padding-left: 0;
+    margin-left:0;
+    padding-right: 0.6em;
+    border-radius: 0;
+}
+
+#tray {
+    padding: 0;
+    margin: 0;
+    background: @bg;
+}

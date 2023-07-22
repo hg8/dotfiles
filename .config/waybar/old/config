@@ -1,0 +1,118 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "spacing": 0, // Gaps between modules (4px)
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["cpu", "memory", "battery", "clock", "tray", "idle_inhibitor"],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{index}:{name} {icon}",
+        "format-icons": {
+            "1: main": "",
+            "9: sub": "",
+            "2: slack": "",
+            "3: disco": "",
+            "8: game": "",
+            "10: media": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 24,
+        "spacing": 2
+    },
+    "clock": {
+        // "timezone": "Japan",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%Y-%m-%d(%a) %H:%M}",
+        "format-alt": "{:%Y-%m-%d(%a) %H:%M}"
+    },
+    "cpu": {
+        "format": " {usage}% LA:{load}",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {used:0.1f}G/{total:0.1f}G({percentage}%)"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+"battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 50
+},
+    "battery2": {
+        "states": {
+            "full": 100,
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+	"bat": "BAT0"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "  {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "    {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/vpn": {
+        "format": " {}",
+        "interval": 5,
+        "exec": "$HOME/.config/waybar/scripts/nm-vpn.sh",
+        "exec-if": "exit 0"
+     },
+    "custom/pacman": {
+        "format": " {}",
+        "interval": 3600,
+        "exec": "checkupdates | wc -l | sed -E 's/^0$//g'",
+        "exec-if": "exit 0",
+        "on-click": "wezterm start -- yay; pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
+        "min-length": 4
+    },
+}

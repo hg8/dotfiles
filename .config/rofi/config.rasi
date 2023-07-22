@@ -1,20 +1,2 @@
-configuration {
-    font            : "FiraCode Nerd Font Medium 20";
-    display-ssh     : "";
-    display-run     : "";
-    display-drun    : "";
-    display-window  : "";
-    display-combi   : "";
-    show-icons: true;
-    modi: "window,run,ssh,drun";
-
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
-}
+//@theme "/home/hugo/.local/share/rofi/themes/spotlight-dark.rasi"
 @theme "/home/hugo/.local/share/rofi/themes/squared-nord.rasi"
